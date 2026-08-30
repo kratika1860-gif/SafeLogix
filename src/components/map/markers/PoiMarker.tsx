@@ -102,7 +102,7 @@ export default function PoiMarker({ poi, onClick }: PoiMarkerProps) {
     >
       <div className="relative group flex flex-col items-center cursor-pointer select-none">
         {/* Floating tooltip/badge */}
-        <div className="opacity-90 group-hover:opacity-100 transition-opacity mb-1 px-1.5 py-0.5 rounded-full text-[10px] font-semibold text-white shadow-md flex items-center gap-1 whitespace-nowrap bg-slate-900/90 border border-slate-700 backdrop-blur-sm">
+        <div className="hidden group-hover:flex transition-all mb-1 px-1.5 py-0.5 rounded-full text-[10px] font-semibold text-white shadow-md items-center gap-1 whitespace-nowrap bg-slate-900/90 border border-slate-700 backdrop-blur-sm z-30">
           <span>{type === 'roadwork' ? '🚧' : type === 'petrol_station' ? '⛽' : type === 'hotel' ? '🏨' : type === 'landslide_prone_area' ? '⛰️' : '🍽️'}</span>
           <span className="max-w-[110px] truncate">{title || name}</span>
         </div>
@@ -115,7 +115,7 @@ export default function PoiMarker({ poi, onClick }: PoiMarkerProps) {
         </div>
 
         {/* Expanded Info tooltip on hover */}
-        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-150 absolute top-full mt-1 bg-slate-950/95 text-white text-[11px] px-2.5 py-1.5 rounded-lg shadow-xl border border-slate-700 pointer-events-none whitespace-nowrap z-30 flex flex-col gap-0.5 backdrop-blur-sm">
+        <div className="hidden group-hover:flex transition-all duration-150 absolute top-full mt-1 bg-slate-950/95 text-white text-[11px] px-2.5 py-1.5 rounded-lg shadow-xl border border-slate-700 pointer-events-none whitespace-nowrap z-30 flex-col gap-0.5 backdrop-blur-sm">
           <div className="font-bold flex items-center justify-between gap-2">
             <span>{name}</span>
             {rating && <span className="text-amber-400 font-semibold">{rating}</span>}

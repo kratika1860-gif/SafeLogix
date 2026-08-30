@@ -38,6 +38,17 @@ function ProtectedRoute({ children, allowedRoles, bypassLogin }: { children: Rea
   }
 
   if (!bypassLogin && (!isAuthenticated || !user)) {
+    const token = localStorage.getItem('DEV_MOCK_TOKEN');
+    if (token && !localStorage.getItem('LOGGED_OUT')) {
+      return (
+        <div className="h-screen w-full flex items-center justify-center bg-[#18181B]">
+          <div className="animate-pulse flex flex-col items-center">
+            <div className="w-12 h-12 border-4 border-[#D4A373] border-t-transparent rounded-full animate-spin mb-4"></div>
+            <div className="text-zinc-400 font-medium">Connecting to Driver Portal...</div>
+          </div>
+        </div>
+      );
+    }
     return <Navigate to="/login" replace />;
   }
 
@@ -60,7 +71,12 @@ function ProtectedRoute({ children, allowedRoles, bypassLogin }: { children: Rea
 
 function RootRedirect() {
   const { user, isAuthenticated } = useAppStore();
-  if (!isAuthenticated || !user) return <Navigate to="/login" replace />;
+  if (!isAuthenticated || !user) {
+    const token = localStorage.getItem('DEV_MOCK_TOKEN');
+    if (token && token.includes('ADMIN')) return <Navigate to="/admin" replace />;
+    if (localStorage.getItem('LOGGED_OUT')) return <Navigate to="/login" replace />;
+    return <Navigate to="/driver" replace />;
+  }
   if (user.role === 'driver' || user.role === 'field_user') {
     return <Navigate to="/driver" replace />;
   }

@@ -3,6 +3,8 @@ import express from 'express';
 const app = express();
 app.use(express.json({ limit: '10mb' }));
 
+let currentDriverDuty = false;
+
 app.get('/api/auth/me', (req, res) => {
   const authHeader = req.headers.authorization || '';
   const isDriverToken = authHeader.includes('DEV_MOCK_TOKEN') && !authHeader.includes('DEV_MOCK_ADMIN_TOKEN');
@@ -10,7 +12,7 @@ app.get('/api/auth/me', (req, res) => {
   if (isDriverToken) {
     return res.json({
       user: { id: '1', uid: 'dev-mock-uid', email: 'driver@safelogix.gov.in', role: 'driver', name: 'Rajesh Kumar' },
-      driverState: { isOnDuty: true }
+      driverState: { isOnDuty: currentDriverDuty }
     });
   }
 
@@ -21,7 +23,10 @@ app.get('/api/auth/me', (req, res) => {
 });
 
 app.post('/api/driver/duty', (req, res) => {
-  res.json({ success: true, isOnDuty: req.body.isOnDuty });
+  if (typeof req.body?.isOnDuty === 'boolean') {
+    currentDriverDuty = req.body.isOnDuty;
+  }
+  res.json({ success: true, isOnDuty: currentDriverDuty });
 });
 
 app.post('/api/sync', (req, res) => {

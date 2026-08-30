@@ -17,6 +17,7 @@ interface AuthState {
 interface AppState extends AuthState, DriverState {
   theme: 'light' | 'dark';
   setTheme: (theme: 'light' | 'dark') => void;
+  setDuty: (isOnDuty: boolean) => Promise<void>;
   toggleDuty: () => Promise<void>;
   updateLocation: (lng: number, lat: number) => void;
   pushLocationRecord: (lat: number, lng: number) => void;
@@ -61,6 +62,7 @@ export const useAppStore = create<AppState>((set, get) => ({
     try {
       if (localStorage.getItem('DEV_MOCK_TOKEN')) {
         localStorage.removeItem('DEV_MOCK_TOKEN');
+        localStorage.setItem('LOGGED_OUT', 'true');
       } else {
         await firebaseSignOut(auth);
       }
@@ -73,13 +75,19 @@ export const useAppStore = create<AppState>((set, get) => ({
   initializeAuth: () => {
     set({ isLoadingAuth: true });
 
-    if (localStorage.getItem('DEV_MOCK_TOKEN')) {
+    let token = localStorage.getItem('DEV_MOCK_TOKEN');
+    if (!token && !localStorage.getItem('LOGGED_OUT')) {
+      token = 'DEV_MOCK_TOKEN';
+      localStorage.setItem('DEV_MOCK_TOKEN', token);
+    }
+
+    if (token) {
       fetchWithAuth('/api/auth/me')
         .then(data => {
           set({ 
-             user: data.user, 
-             isAuthenticated: true,
-            isOnDuty: data.driverState.isOnDuty,
+            user: data.user, 
+            isAuthenticated: true,
+            isOnDuty: data.driverState?.isOnDuty ?? false,
             isLoadingAuth: false
           });
         })
@@ -96,9 +104,9 @@ export const useAppStore = create<AppState>((set, get) => ({
         try {
           const data = await fetchWithAuth('/api/auth/me');
           set({ 
-             user: data.user, 
-             isAuthenticated: true,
-            isOnDuty: data.driverState.isOnDuty,
+            user: data.user, 
+            isAuthenticated: true,
+            isOnDuty: data.driverState?.isOnDuty ?? false,
             isLoadingAuth: false
           });
         } catch (error) {
@@ -111,11 +119,9 @@ export const useAppStore = create<AppState>((set, get) => ({
     });
   },
 
-  toggleDuty: async () => {
+  setDuty: async (newState: boolean) => {
     const currentState = get().isOnDuty;
-    const newState = !currentState;
-    set({ isOnDuty: newState }); // Optimistic update
-    
+    set({ isOnDuty: newState });
     try {
       await fetchWithAuth('/api/driver/duty', {
         method: 'POST',
@@ -123,8 +129,13 @@ export const useAppStore = create<AppState>((set, get) => ({
       });
     } catch (err) {
       console.error("Failed to sync duty status", err);
-      set({ isOnDuty: currentState }); // Revert on failure
+      set({ isOnDuty: currentState });
     }
+  },
+
+  toggleDuty: async () => {
+    const currentState = get().isOnDuty;
+    await get().setDuty(!currentState);
   },
   
   updateLocation: (lng, lat) => set({ currentLocation: [lng, lat] }),
@@ -162,7 +173,7 @@ export const useAppStore = create<AppState>((set, get) => ({
     }
   },
 
-  setActiveTrip: (trip) => set({ activeTrip: trip, isOnDuty: !!trip }),
+  setActiveTrip: (trip) => set({ activeTrip: trip }),
   
   updateTripStatus: (status) => set((state) => ({
     activeTrip: state.activeTrip ? { ...state.activeTrip, status } : null

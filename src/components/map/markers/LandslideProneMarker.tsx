@@ -38,7 +38,7 @@ export default function LandslideProneMarker({ landslide, onClick }: LandslidePr
     >
       <div className="relative group flex flex-col items-center cursor-pointer select-none">
         {/* Floating title tag above marker */}
-        <div className="opacity-90 group-hover:opacity-100 transition-all mb-1 px-2 py-0.5 rounded-full text-[10px] font-bold text-white shadow-lg flex items-center gap-1 whitespace-nowrap bg-slate-950/90 border border-amber-500/60 backdrop-blur-sm">
+        <div className="hidden group-hover:flex transition-all mb-1 px-2 py-0.5 rounded-full text-[10px] font-bold text-white shadow-lg items-center gap-1 whitespace-nowrap bg-slate-950/90 border border-amber-500/60 backdrop-blur-sm z-30">
           <span className="text-amber-400">⛰️</span>
           <span className="max-w-[130px] truncate">{title || name}</span>
           <span className={`px-1 py-0.2 rounded text-[9px] font-extrabold ${isCritical ? 'bg-red-600' : 'bg-amber-600'}`}>
@@ -59,7 +59,7 @@ export default function LandslideProneMarker({ landslide, onClick }: LandslidePr
         </div>
 
         {/* Rich Hover Card Tooltip */}
-        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-150 absolute top-full mt-1 bg-slate-950/95 text-white text-xs px-3 py-2 rounded-xl shadow-2xl border border-amber-500/50 pointer-events-none whitespace-nowrap z-40 flex flex-col gap-1 backdrop-blur-md">
+        <div className="hidden group-hover:flex transition-all duration-150 absolute top-full mt-1 bg-slate-950/95 text-white text-xs px-3 py-2 rounded-xl shadow-2xl border border-amber-500/50 pointer-events-none whitespace-nowrap z-40 flex-col gap-1 backdrop-blur-md">
           <div className="font-bold flex items-center justify-between gap-3 text-amber-300">
             <span className="flex items-center gap-1">
               <ShieldAlert className="w-3.5 h-3.5 text-amber-400" />

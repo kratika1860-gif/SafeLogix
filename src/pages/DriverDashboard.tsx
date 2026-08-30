@@ -30,6 +30,12 @@ export default function DriverDashboard() {
   const { setShowNotifications } = useOutletContext<{ setShowNotifications: (v: boolean) => void }>() || { setShowNotifications: () => {} };
 
   useEffect(() => {
+    if (activeTrip && (activeTrip.status === 'completed' || activeTrip.status === 'cancelled')) {
+      useAppStore.getState().setActiveTrip(null);
+    }
+  }, []);
+
+  useEffect(() => {
     if (isOnDuty && !activeTrip) {
       const timer = setTimeout(() => {
         fetchAssignedTrip();
@@ -122,7 +128,7 @@ export default function DriverDashboard() {
         </div>
       </div>
 
-            {/* Main Content Area */}
+      {/* Main Content Area */}
       <div className="flex-1 relative bg-transparent overflow-hidden">
         {!activeTrip ? (
            <>
@@ -147,24 +153,41 @@ export default function DriverDashboard() {
             {activeTrip.status === 'assigned' || activeTrip.status === 'accepted' ? (
                 <RoutePanel />
               ) : activeTrip.status === 'completed' || activeTrip.status === 'cancelled' ? (
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#27272A]/95 backdrop-blur-2xl p-6 rounded-3xl shadow-2xl flex flex-col items-center gap-4 z-20 border border-[#D4A373]/25 w-[90%] max-w-sm text-center">
-                  <h3 className="text-xl font-bold text-[#FAF7F2] font-heading">
-                    {activeTrip.status === 'completed' ? 'Trip Completed! 🎉' : 'Trip Cancelled'}
-                  </h3>
-                  <p className="text-zinc-400 text-sm">You are still on duty. What would you like to do next?</p>
-                  <div className="flex w-full gap-3 mt-2">
-                    <button 
-                      onClick={() => { useAppStore.getState().setActiveTrip(null); fetchAssignedTrip(); }}
-                      className="flex-1 py-3 bg-gradient-to-r from-[#D4A373] to-[#E9C46A] text-[#18181B] rounded-xl font-bold hover:brightness-105 transition-all shadow-md shadow-[#D4A373]/20 active:scale-95"
-                    >
-                      Find Next
-                    </button>
-                    <button 
-                      onClick={toggleDuty}
-                      className="flex-1 py-3 bg-[#18181B]/80 text-zinc-300 rounded-xl font-bold hover:bg-zinc-800 hover:text-white transition-colors border border-zinc-700/60 active:scale-95"
-                    >
-                      Off Duty
-                    </button>
+                <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+                  <div className="bg-[#27272A]/95 backdrop-blur-2xl p-6 rounded-3xl shadow-2xl flex flex-col items-center gap-4 border border-[#D4A373]/25 w-[90%] max-w-sm text-center animate-in fade-in zoom-in-95 duration-150">
+                    <h3 className="text-xl font-bold text-[#FAF7F2] font-heading">
+                      {activeTrip.status === 'completed' ? 'Trip Completed! 🎉' : 'Trip Cancelled'}
+                    </h3>
+                    <p className="text-zinc-400 text-sm">
+                      {activeTrip.status === 'completed' 
+                        ? 'Trip has been successfully recorded. What would you like to do next?' 
+                        : 'Trip assignment was cancelled. What would you like to do next?'}
+                    </p>
+                    <div className="flex w-full gap-3 mt-2">
+                      <button 
+                        id="btn-find-next-trip"
+                        onClick={async () => {
+                          const store = useAppStore.getState();
+                          store.setActiveTrip(null);
+                          await store.setDuty(true);
+                          store.fetchAssignedTrip();
+                        }}
+                        className="flex-1 py-3 bg-gradient-to-r from-[#D4A373] to-[#E9C46A] text-[#18181B] rounded-xl font-bold hover:brightness-105 transition-all shadow-md shadow-[#D4A373]/20 active:scale-95 cursor-pointer"
+                      >
+                        Find Next
+                      </button>
+                      <button 
+                        id="btn-off-duty-modal"
+                        onClick={async () => {
+                          const store = useAppStore.getState();
+                          store.setActiveTrip(null);
+                          await store.setDuty(false);
+                        }}
+                        className="flex-1 py-3 bg-[#18181B]/80 text-zinc-300 rounded-xl font-bold hover:bg-zinc-800 hover:text-white transition-colors border border-zinc-700/60 active:scale-95 cursor-pointer"
+                      >
+                        Off Duty
+                      </button>
+                    </div>
                   </div>
                 </div>
               ) : (

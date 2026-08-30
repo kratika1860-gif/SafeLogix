@@ -102,14 +102,16 @@ export default function StartTripModal() {
         {/* Footer Actions */}
         <div className="p-4 border-t border-slate-200 bg-slate-50 flex justify-end gap-3 shrink-0">
           <button 
-            className="px-6 py-2 rounded-lg font-medium text-slate-600 hover:bg-slate-200 transition-colors"
+            id="btn-decline-trip"
+            className="px-6 py-2 rounded-lg font-medium text-slate-600 hover:bg-slate-200 transition-colors cursor-pointer"
             onClick={() => updateTripStatus('cancelled')}
           >
             Decline
           </button>
           <button 
+            id="btn-confirm-trip"
             className={cn(
-              "px-6 py-2 rounded-lg font-bold text-white transition-colors shadow-md",
+              "px-6 py-2 rounded-lg font-bold text-white transition-colors shadow-md cursor-pointer",
               activeTrip.status === 'assigned' ? "bg-blue-600 hover:bg-blue-700" : "bg-green-600 hover:bg-green-700"
             )}
             onClick={handleConfirm}

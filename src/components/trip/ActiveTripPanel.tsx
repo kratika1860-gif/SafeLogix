@@ -118,6 +118,15 @@ export default function ActiveTripPanel() {
           >
             Simulate Critical Disruption (Reroute)
           </button>
+
+          {/* Cancel Active Trip */}
+          <button 
+            id="btn-cancel-active-trip"
+            onClick={() => updateTripStatus('cancelled')}
+            className="w-full mt-2 py-2 rounded-xl font-bold text-zinc-500 hover:text-red-600 bg-zinc-100 hover:bg-red-50 transition-colors border border-zinc-200 flex items-center justify-center gap-2 text-xs cursor-pointer"
+          >
+            Cancel Trip Assignment
+          </button>
         </div>
       </div>
 

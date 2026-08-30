@@ -48,12 +48,13 @@ export default function Login() {
     setError(null);
     setLoading(true);
     try {
+      localStorage.removeItem('LOGGED_OUT');
       localStorage.setItem('DEV_MOCK_TOKEN', role === 'admin' ? 'DEV_MOCK_ADMIN_TOKEN' : 'DEV_MOCK_TOKEN');
       setLoginSuccess(true);
       setTimeout(() => {
         initializeAuth();
-        navigate('/');
-      }, 1500);
+        navigate(role === 'driver' ? '/driver' : '/admin');
+      }, 500);
     } catch (err: any) {
       setError('Dev mode bypass failed.');
       setLoading(false);
