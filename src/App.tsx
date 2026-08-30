@@ -22,12 +22,12 @@ import { useAppStore } from './store/useAppStore';
 function ProtectedRoute({ children, allowedRoles, bypassLogin }: { children: React.ReactNode, allowedRoles?: string[], bypassLogin?: boolean }) {
   const { user, isAuthenticated, isLoadingAuth } = useAppStore();
 
-  if (isLoadingAuth) {
+  if (isLoadingAuth && (!user || !isAuthenticated)) {
     return (
-      <div className="h-screen w-full flex items-center justify-center bg-slate-100">
-        <div className="animate-pulse flex flex-col items-center">
-          <div className="w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mb-4"></div>
-          <div className="text-slate-600 font-medium">Verifying Session...</div>
+      <div className="h-screen w-full flex items-center justify-center bg-[#18181B] text-[#FAF7F2]">
+        <div className="flex flex-col items-center gap-3">
+          <div className="w-12 h-12 rounded-full border-2 border-[#D4A373]/20 border-t-[#D4A373] animate-spin"></div>
+          <div className="text-zinc-400 font-semibold text-xs tracking-wider uppercase animate-pulse">Verifying SafeLogix Session...</div>
         </div>
       </div>
     );
@@ -41,10 +41,10 @@ function ProtectedRoute({ children, allowedRoles, bypassLogin }: { children: Rea
     const token = localStorage.getItem('DEV_MOCK_TOKEN');
     if (token && !localStorage.getItem('LOGGED_OUT')) {
       return (
-        <div className="h-screen w-full flex items-center justify-center bg-[#18181B]">
-          <div className="animate-pulse flex flex-col items-center">
-            <div className="w-12 h-12 border-4 border-[#D4A373] border-t-transparent rounded-full animate-spin mb-4"></div>
-            <div className="text-zinc-400 font-medium">Connecting to Driver Portal...</div>
+        <div className="h-screen w-full flex items-center justify-center bg-[#18181B] text-[#FAF7F2]">
+          <div className="flex flex-col items-center gap-3">
+            <div className="w-12 h-12 rounded-full border-2 border-[#D4A373]/20 border-t-[#D4A373] animate-spin"></div>
+            <div className="text-zinc-400 font-semibold text-xs tracking-wider uppercase animate-pulse">Connecting to Command Portal...</div>
           </div>
         </div>
       );

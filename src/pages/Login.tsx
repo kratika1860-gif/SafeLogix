@@ -20,6 +20,7 @@ export default function Login() {
   const [resetSent, setResetSent] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [loginSuccess, setLoginSuccess] = useState(false);
+  const [clickedRole, setClickedRole] = useState<'driver' | 'admin' | 'email' | null>(null);
   const [isHovered, setIsHovered] = useState(false);
   const navigate = useNavigate();
   const { initializeAuth } = useAppStore();
@@ -27,37 +28,68 @@ export default function Login() {
   const handleAuth = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
+    setClickedRole('email');
     setLoading(true);
     try {
+      localStorage.removeItem('LOGGED_OUT');
       if (mode === 'register') {
         await createUserWithEmailAndPassword(auth, email, password);
       } else {
         await signInWithEmailAndPassword(auth, email, password);
       }
       setLoginSuccess(true);
+      
+      await useAppStore.getState().initializeAuth();
+      const user = useAppStore.getState().user;
       setTimeout(() => {
-        navigate('/');
-      }, 1500);
+        if (user && ['driver', 'field_user'].includes(user.role)) {
+          navigate('/driver');
+        } else {
+          navigate('/admin');
+        }
+      }, 150);
     } catch (err: any) {
       setError(err.message || 'Authentication failed');
       setLoading(false);
+      setClickedRole(null);
     }
   };
 
   const handleMockLogin = async (role: 'driver' | 'admin') => {
     setError(null);
+    setClickedRole(role);
     setLoading(true);
     try {
       localStorage.removeItem('LOGGED_OUT');
-      localStorage.setItem('DEV_MOCK_TOKEN', role === 'admin' ? 'DEV_MOCK_ADMIN_TOKEN' : 'DEV_MOCK_TOKEN');
+      const token = role === 'admin' ? 'DEV_MOCK_ADMIN_TOKEN' : 'DEV_MOCK_TOKEN';
+      localStorage.setItem('DEV_MOCK_TOKEN', token);
       setLoginSuccess(true);
+
+      const mockUser = role === 'admin' ? {
+        id: '2',
+        uid: 'dev-mock-admin-uid',
+        email: 'admin@safelogix.gov.in',
+        role: 'admin' as const,
+        name: 'HQ Commander'
+      } : {
+        id: '1',
+        uid: 'dev-mock-uid',
+        email: 'driver@safelogix.gov.in',
+        role: 'driver' as const,
+        name: 'Rajesh Kumar'
+      };
+
+      const store = useAppStore.getState();
+      store.login(mockUser);
+      store.initializeAuth();
+
       setTimeout(() => {
-        initializeAuth();
         navigate(role === 'driver' ? '/driver' : '/admin');
-      }, 500);
+      }, 120);
     } catch (err: any) {
       setError('Dev mode bypass failed.');
       setLoading(false);
+      setClickedRole(null);
     }
   };
   
@@ -81,16 +113,24 @@ export default function Login() {
 
   return (
     <div className="min-h-screen bg-[#18181B] text-[#FAF7F2] relative flex items-center justify-center p-4 sm:p-8 overflow-hidden font-sans">
-      {/* Ambient background glow */}
-      <div className="absolute top-[-15%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-[#D4A373]/10 blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-[-15%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-[#E9C46A]/8 blur-[140px] pointer-events-none" />
+      {/* Ambient background glow with breathing animation */}
+      <motion.div 
+        animate={{ scale: [1, 1.08, 1], opacity: [0.1, 0.16, 0.1] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-[-15%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-[#D4A373]/10 blur-[120px] pointer-events-none will-change-transform" 
+      />
+      <motion.div 
+        animate={{ scale: [1, 1.12, 1], opacity: [0.08, 0.14, 0.08] }}
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+        className="absolute bottom-[-15%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-[#E9C46A]/8 blur-[140px] pointer-events-none will-change-transform" 
+      />
 
       {/* Animated Floating Particles */}
       <div className="absolute inset-0 pointer-events-none">
         {Array.from({ length: 30 }).map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-[#E9C46A] rounded-full"
+            className="absolute w-1 h-1 bg-[#E9C46A] rounded-full will-change-transform"
             style={{
               left: `${(i * 3.3 + 7) % 100}%`,
               top: `${(i * 7.1 + 13) % 100}%`,
@@ -110,7 +150,12 @@ export default function Login() {
         ))}
       </div>
 
-      <div className="relative z-10 w-full max-w-[1020px] bg-[#27272A]/70 backdrop-blur-2xl border border-[#D4A373]/25 rounded-3xl shadow-[0_25px_60px_-15px_rgba(0,0,0,0.7)] overflow-hidden flex flex-col md:flex-row">
+      <motion.div 
+        initial={{ opacity: 0, scale: 0.98, y: 16 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+        className="relative z-10 w-full max-w-[1020px] bg-[#27272A]/70 backdrop-blur-2xl border border-[#D4A373]/25 rounded-3xl shadow-[0_25px_60px_-15px_rgba(0,0,0,0.7)] overflow-hidden flex flex-col md:flex-row"
+      >
         {/* Left Side: Mascot Scene */}
         <div 
           className="w-full md:w-[50%] h-[280px] md:h-auto md:min-h-[580px] relative bg-[#1E1E22]/80 border-b md:border-b-0 md:border-r border-[#D4A373]/20 flex items-center justify-center p-6"
@@ -262,13 +307,22 @@ export default function Login() {
                 </div>
 
                 <div className="pt-2">
-                  <button
+                  <motion.button
                     type="submit"
+                    whileHover={{ scale: 1.01 }}
+                    whileTap={{ scale: 0.98 }}
                     disabled={loading}
-                    className="w-full py-2.5 px-4 bg-gradient-to-r from-[#D4A373] to-[#E9C46A] hover:brightness-110 text-[#18181B] rounded-xl font-bold text-xs shadow-lg shadow-[#D4A373]/20 disabled:opacity-50 transition-all flex items-center justify-center gap-2"
+                    className="w-full py-2.5 px-4 bg-gradient-to-r from-[#D4A373] to-[#E9C46A] hover:brightness-110 text-[#18181B] rounded-xl font-bold text-xs shadow-lg shadow-[#D4A373]/20 disabled:opacity-80 transition-all flex items-center justify-center gap-2 cursor-pointer select-none"
                   >
-                    {loading ? 'Authenticating...' : (mode === 'login' ? 'Sign In to Portal' : 'Create Account')}
-                  </button>
+                    {loading && clickedRole === 'email' ? (
+                      <>
+                        <div className="w-3.5 h-3.5 border-2 border-[#18181B] border-t-transparent rounded-full animate-spin" />
+                        <span>Authenticating Credentials...</span>
+                      </>
+                    ) : (
+                      <span>{mode === 'login' ? 'Sign In to Portal' : 'Create Account'}</span>
+                    )}
+                  </motion.button>
                 </div>
                 
                 <div className="relative my-4">
@@ -281,24 +335,36 @@ export default function Login() {
                 </div>
                 
                 <div className="grid grid-cols-2 gap-2.5">
-                  <button
+                  <motion.button
                     type="button"
+                    whileHover={{ scale: 1.02, y: -1 }}
+                    whileTap={{ scale: 0.98 }}
                     onClick={() => handleMockLogin('driver')}
                     disabled={loading}
-                    className="flex justify-center items-center gap-2 py-2 px-3 bg-zinc-800/80 hover:bg-zinc-700/80 border border-zinc-700/60 text-[#FAF7F2] rounded-xl text-xs font-semibold transition-all hover:border-[#D4A373]/40"
+                    className="flex justify-center items-center gap-2 py-2.5 px-3 bg-zinc-800/90 hover:bg-zinc-700/90 border border-zinc-700/60 text-[#FAF7F2] rounded-xl text-xs font-semibold transition-all hover:border-[#D4A373]/50 shadow-sm cursor-pointer disabled:opacity-80 select-none"
                   >
-                    <Fingerprint className="w-3.5 h-3.5 text-[#D4A373]" />
-                    <span>Driver View</span>
-                  </button>
-                  <button
+                    {clickedRole === 'driver' && loading ? (
+                      <div className="w-3.5 h-3.5 border-2 border-[#D4A373] border-t-transparent rounded-full animate-spin" />
+                    ) : (
+                      <Fingerprint className="w-3.5 h-3.5 text-[#D4A373]" />
+                    )}
+                    <span>{clickedRole === 'driver' && loading ? 'Accessing...' : 'Driver View'}</span>
+                  </motion.button>
+                  <motion.button
                     type="button"
+                    whileHover={{ scale: 1.02, y: -1 }}
+                    whileTap={{ scale: 0.98 }}
                     onClick={() => handleMockLogin('admin')}
                     disabled={loading}
-                    className="flex justify-center items-center gap-2 py-2 px-3 bg-zinc-800/80 hover:bg-zinc-700/80 border border-zinc-700/60 text-[#FAF7F2] rounded-xl text-xs font-semibold transition-all hover:border-[#E9C46A]/40"
+                    className="flex justify-center items-center gap-2 py-2.5 px-3 bg-zinc-800/90 hover:bg-zinc-700/90 border border-zinc-700/60 text-[#FAF7F2] rounded-xl text-xs font-semibold transition-all hover:border-[#E9C46A]/50 shadow-sm cursor-pointer disabled:opacity-80 select-none"
                   >
-                    <ShieldAlert className="w-3.5 h-3.5 text-[#E9C46A]" />
-                    <span>Admin HQ</span>
-                  </button>
+                    {clickedRole === 'admin' && loading ? (
+                      <div className="w-3.5 h-3.5 border-2 border-[#E9C46A] border-t-transparent rounded-full animate-spin" />
+                    ) : (
+                      <ShieldAlert className="w-3.5 h-3.5 text-[#E9C46A]" />
+                    )}
+                    <span>{clickedRole === 'admin' && loading ? 'Accessing...' : 'Admin HQ'}</span>
+                  </motion.button>
                 </div>
                 
                 <div className="pt-2 text-center">
@@ -314,7 +380,7 @@ export default function Login() {
             )}
           </motion.div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

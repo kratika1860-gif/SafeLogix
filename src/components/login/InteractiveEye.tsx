@@ -11,15 +11,26 @@ interface InteractiveEyeProps {
   isClosed?: boolean;
 }
 
-export function InteractiveEye({ cx, cy, r, pupilR, eyeColor = '#FFFFFF', pupilColor = '#1F2937', delay = 0, isClosed = false }: InteractiveEyeProps) {
+export function InteractiveEye({ 
+  cx, 
+  cy, 
+  r, 
+  pupilR, 
+  eyeColor = '#FFFFFF', 
+  pupilColor = '#1F2937', 
+  delay = 0, 
+  isClosed = false 
+}: InteractiveEyeProps) {
   const eyeRef = useRef<SVGCircleElement>(null);
-  const [pupilPos, setPupilPos] = useState({ x: cx, y: cy });
+  const pupilRef = useRef<SVGCircleElement>(null);
   const [scaleY, setScaleY] = useState(1);
 
   useEffect(() => {
     let animationFrameId: number;
     let targetX = cx;
     let targetY = cy;
+    let currentX = cx;
+    let currentY = cy;
 
     const handleMouseMove = (e: MouseEvent) => {
       if (!eyeRef.current) return;
@@ -38,16 +49,18 @@ export function InteractiveEye({ cx, cy, r, pupilR, eyeColor = '#FFFFFF', pupilC
     };
 
     const animate = () => {
-      setPupilPos((prev) => ({
-        x: prev.x + (targetX - prev.x) * 0.15,
-        y: prev.y + (targetY - prev.y) * 0.15,
-      }));
+      currentX += (targetX - currentX) * 0.18;
+      currentY += (targetY - currentY) * 0.18;
+      
+      if (pupilRef.current) {
+        pupilRef.current.setAttribute('cx', currentX.toFixed(2));
+        pupilRef.current.setAttribute('cy', currentY.toFixed(2));
+      }
       animationFrameId = requestAnimationFrame(animate);
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mousemove', handleMouseMove, { passive: true });
     
-    // start tracking
     const startTimer = setTimeout(() => {
       animationFrameId = requestAnimationFrame(animate);
     }, delay);
@@ -70,11 +83,11 @@ export function InteractiveEye({ cx, cy, r, pupilR, eyeColor = '#FFFFFF', pupilC
 
     const blink = () => {
       setScaleY(0.05);
-      setTimeout(() => setScaleY(1), 150);
-      timeoutId = setTimeout(blink, 3000 + Math.random() * 5000);
+      setTimeout(() => setScaleY(1), 140);
+      timeoutId = setTimeout(blink, 3500 + Math.random() * 4500);
     };
 
-    timeoutId = setTimeout(blink, 1000 + Math.random() * 4000);
+    timeoutId = setTimeout(blink, 1500 + Math.random() * 3500);
 
     return () => clearTimeout(timeoutId);
   }, [isClosed]);
@@ -82,10 +95,10 @@ export function InteractiveEye({ cx, cy, r, pupilR, eyeColor = '#FFFFFF', pupilC
   return (
     <g style={{ 
       transform: `translate(${cx}px, ${cy}px) scale(1, ${scaleY}) translate(${-cx}px, ${-cy}px)`, 
-      transition: 'transform 0.1s ease-out' 
+      transition: 'transform 0.12s cubic-bezier(0.4, 0, 0.2, 1)' 
     }}>
       <circle ref={eyeRef} cx={cx} cy={cy} r={r} fill={eyeColor} />
-      <circle cx={pupilPos.x} cy={pupilPos.y} r={pupilR} fill={pupilColor} />
+      <circle ref={pupilRef} cx={cx} cy={cy} r={pupilR} fill={pupilColor} />
     </g>
   );
 }
