@@ -15,14 +15,14 @@ export function useSupercluster<P extends GeoJsonProperties = GeoJsonProperties>
   zoom,
   options
 }: UseSuperclusterProps<P>) {
-  const superclusterRef = useRef<Supercluster<P, any>>();
+  const superclusterRef = useRef<Supercluster<P, any> | null>(null);
   const [clusters, setClusters] = useState<Array<Supercluster.ClusterFeature<any> | Supercluster.PointFeature<P>>>([]);
 
   const optionsJson = JSON.stringify(options);
 
   useEffect(() => {
     try {
-      const clusterer = new Supercluster(options);
+      const clusterer = new Supercluster<P, any>(options || {});
       clusterer.load(points || []);
       superclusterRef.current = clusterer;
     } catch (e) {

@@ -119,14 +119,14 @@ export default function GISMap() {
         return true;
       })
       .map((i: any) => ({
-        type: 'Feature',
+        type: 'Feature' as const,
         properties: { cluster: false, id: i.properties.id, category: 'incident', ...i.properties },
-        geometry: { type: 'Point', coordinates: i.geometry.coordinates }
+        geometry: { type: 'Point' as const, coordinates: i.geometry.coordinates }
       }));
   }, [data?.incidents, layers.criticalAlerts, layers.accidents, layers.landslides, layers.floods, layers.waterlogging, layers.roadDamage, layers.bridgeDamage, layers.roadClosures]);
 
   const { clusters: incidentClusters, supercluster: incidentSupercluster } = useSupercluster({
-    points: incidentPoints,
+    points: incidentPoints as any,
     bounds: bounds as any,
     zoom: viewState?.zoom || 11.5,
     options: { radius: 50, maxZoom: 12 }
@@ -144,14 +144,14 @@ export default function GISMap() {
         return true;
       })
       .map((l: any) => ({
-        type: 'Feature',
+        type: 'Feature' as const,
         properties: { cluster: false, id: l.properties.id, category: 'logistics', ...l.properties },
-        geometry: { type: 'Point', coordinates: l.geometry.coordinates }
+        geometry: { type: 'Point' as const, coordinates: l.geometry.coordinates }
       }));
   }, [data?.logistics, layers.warehouses, layers.checkpoints, layers.deliveryLocations]);
 
   const { clusters: logisticsClusters, supercluster: logisticsSupercluster } = useSupercluster({
-    points: logisticsPoints,
+    points: logisticsPoints as any,
     bounds: bounds as any,
     zoom: viewState?.zoom || 11.5,
     options: { radius: 60, maxZoom: 12 }
@@ -205,7 +205,7 @@ export default function GISMap() {
 
   useEffect(() => {
     if (activeRoute && mapRef.current) {
-      const [minLng, minLat, maxLng, maxLat] = bbox(activeRoute);
+      const [minLng, minLat, maxLng, maxLat] = bbox(activeRoute as any);
       mapRef.current.fitBounds(
         [[minLng, minLat], [maxLng, maxLat]],
         { padding: 40, duration: 1000 }
@@ -223,9 +223,17 @@ export default function GISMap() {
         ref={mapRef}
         showSearch={false}
         onMoveEnd={handleMoveEnd}
-        onLoad={(e) => {
+        onLoad={(e: any) => {
           setIsMapLoaded(true);
-          setViewState(e.target.getViewState());
+          const center = e.target.getCenter();
+          setViewState({ 
+            longitude: center.lng, 
+            latitude: center.lat, 
+            zoom: e.target.getZoom(),
+            bearing: 0,
+            pitch: 0,
+            padding: { top: 0, bottom: 0, left: 0, right: 0 }
+          });
         }}
         interactiveLayerIds={['routes-layer', 'zones-layer', 'corridors-layer', 'emergency-routes-line']}
         onClick={(e) => {

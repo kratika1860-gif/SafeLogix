@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Outlet, NavLink, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Shield, LayoutDashboard, Map, Settings, Users, LogOut, FileText, Bell, ShieldAlert, X, Radio, Activity } from 'lucide-react';
+import { 
+  Shield, LayoutDashboard, Map, Settings, Users, LogOut, FileText, 
+  Bell, ShieldAlert, X, Radio, Activity, Truck, UserCheck, 
+  Navigation, BrainCircuit, BellRing, Siren 
+} from 'lucide-react';
 import { useAppStore } from '../store/useAppStore';
 import { useReportStore } from '../store/useReportStore';
 import { useNotificationStore } from '../store/useNotificationStore';
@@ -155,7 +159,7 @@ export default function AdminLayout() {
             to="/admin" 
             end
             className={({ isActive }) => cn(
-              "flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium transition-all",
+              "flex items-center gap-3 px-3.5 py-2 rounded-xl text-xs font-medium transition-all",
               isActive 
                 ? "bg-gradient-to-r from-[#D4A373]/20 to-[#E9C46A]/10 text-[#FAF7F2] border-l-2 border-[#D4A373] font-semibold shadow-sm" 
                 : "text-zinc-400 hover:text-[#FAF7F2] hover:bg-zinc-800/60"
@@ -168,7 +172,7 @@ export default function AdminLayout() {
           <NavLink 
             to="/admin/map" 
             className={({ isActive }) => cn(
-              "flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium transition-all",
+              "flex items-center gap-3 px-3.5 py-2 rounded-xl text-xs font-medium transition-all",
               isActive 
                 ? "bg-gradient-to-r from-[#D4A373]/20 to-[#E9C46A]/10 text-[#FAF7F2] border-l-2 border-[#D4A373] font-semibold shadow-sm" 
                 : "text-zinc-400 hover:text-[#FAF7F2] hover:bg-zinc-800/60"
@@ -181,7 +185,7 @@ export default function AdminLayout() {
           <NavLink 
             to="/admin/incidents" 
             className={({ isActive }) => cn(
-              "flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium transition-all",
+              "flex items-center gap-3 px-3.5 py-2 rounded-xl text-xs font-medium transition-all",
               isActive 
                 ? "bg-gradient-to-r from-[#D4A373]/20 to-[#E9C46A]/10 text-[#FAF7F2] border-l-2 border-[#D4A373] font-semibold shadow-sm" 
                 : "text-zinc-400 hover:text-[#FAF7F2] hover:bg-zinc-800/60"
@@ -192,22 +196,9 @@ export default function AdminLayout() {
           </NavLink>
 
           <NavLink 
-            to="/admin/users" 
-            className={({ isActive }) => cn(
-              "flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium transition-all",
-              isActive 
-                ? "bg-gradient-to-r from-[#D4A373]/20 to-[#E9C46A]/10 text-[#FAF7F2] border-l-2 border-[#D4A373] font-semibold shadow-sm" 
-                : "text-zinc-400 hover:text-[#FAF7F2] hover:bg-zinc-800/60"
-            )}
-          >
-            <Users className="w-4 h-4 text-[#D4A373]" />
-            <span>Personnel</span>
-          </NavLink>
-
-          <NavLink 
             to="/admin/sos" 
             className={({ isActive }) => cn(
-              "flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-bold transition-all relative overflow-hidden",
+              "flex items-center justify-between px-3.5 py-2 rounded-xl text-xs font-bold transition-all relative overflow-hidden",
               isActive 
                 ? "bg-red-500/20 text-red-300 border-l-2 border-red-500 shadow-sm" 
                 : activeEmergenciesCount > 0 
@@ -220,12 +211,119 @@ export default function AdminLayout() {
               <span>SOS Alerts</span>
             </div>
             {activeEmergenciesCount > 0 && (
-              <span className="px-2 py-0.5 rounded-full text-xs font-extrabold bg-red-600 text-white shadow-sm animate-pulse">
+              <span className="px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-red-600 text-white shadow-sm animate-pulse">
                 {activeEmergenciesCount}
               </span>
             )}
           </NavLink>
 
+          <div className="text-[10px] uppercase text-[#D4A373]/70 font-extrabold tracking-widest px-3 mb-2 mt-4">Fleet & Logistics</div>
+
+          <NavLink 
+            to="/admin/vehicles" 
+            className={({ isActive }) => cn(
+              "flex items-center gap-3 px-3.5 py-2 rounded-xl text-xs font-medium transition-all",
+              isActive 
+                ? "bg-gradient-to-r from-[#D4A373]/20 to-[#E9C46A]/10 text-[#FAF7F2] border-l-2 border-[#D4A373] font-semibold shadow-sm" 
+                : "text-zinc-400 hover:text-[#FAF7F2] hover:bg-zinc-800/60"
+            )}
+          >
+            <Truck className="w-4 h-4 text-[#D4A373]" />
+            <span>Vehicles</span>
+          </NavLink>
+
+          <NavLink 
+            to="/admin/drivers" 
+            className={({ isActive }) => cn(
+              "flex items-center gap-3 px-3.5 py-2 rounded-xl text-xs font-medium transition-all",
+              isActive 
+                ? "bg-gradient-to-r from-[#D4A373]/20 to-[#E9C46A]/10 text-[#FAF7F2] border-l-2 border-[#D4A373] font-semibold shadow-sm" 
+                : "text-zinc-400 hover:text-[#FAF7F2] hover:bg-zinc-800/60"
+            )}
+          >
+            <UserCheck className="w-4 h-4 text-[#D4A373]" />
+            <span>Drivers</span>
+          </NavLink>
+
+          <NavLink 
+            to="/admin/trips" 
+            className={({ isActive }) => cn(
+              "flex items-center gap-3 px-3.5 py-2 rounded-xl text-xs font-medium transition-all",
+              isActive 
+                ? "bg-gradient-to-r from-[#D4A373]/20 to-[#E9C46A]/10 text-[#FAF7F2] border-l-2 border-[#D4A373] font-semibold shadow-sm" 
+                : "text-zinc-400 hover:text-[#FAF7F2] hover:bg-zinc-800/60"
+            )}
+          >
+            <Navigation className="w-4 h-4 text-[#D4A373]" />
+            <span>Trips</span>
+          </NavLink>
+
+          <NavLink 
+            to="/admin/users" 
+            className={({ isActive }) => cn(
+              "flex items-center gap-3 px-3.5 py-2 rounded-xl text-xs font-medium transition-all",
+              isActive 
+                ? "bg-gradient-to-r from-[#D4A373]/20 to-[#E9C46A]/10 text-[#FAF7F2] border-l-2 border-[#D4A373] font-semibold shadow-sm" 
+                : "text-zinc-400 hover:text-[#FAF7F2] hover:bg-zinc-800/60"
+            )}
+          >
+            <Users className="w-4 h-4 text-[#D4A373]" />
+            <span>Personnel</span>
+          </NavLink>
+
+          <div className="text-[10px] uppercase text-[#D4A373]/70 font-extrabold tracking-widest px-3 mb-2 mt-4">Intelligence & System</div>
+
+          <NavLink 
+            to="/admin/analytics" 
+            className={({ isActive }) => cn(
+              "flex items-center gap-3 px-3.5 py-2 rounded-xl text-xs font-medium transition-all",
+              isActive 
+                ? "bg-gradient-to-r from-[#D4A373]/20 to-[#E9C46A]/10 text-[#FAF7F2] border-l-2 border-[#D4A373] font-semibold shadow-sm" 
+                : "text-zinc-400 hover:text-[#FAF7F2] hover:bg-zinc-800/60"
+            )}
+          >
+            <BrainCircuit className="w-4 h-4 text-[#D4A373]" />
+            <span>AI Analytics</span>
+          </NavLink>
+
+          <NavLink 
+            to="/admin/alerts" 
+            className={({ isActive }) => cn(
+              "flex items-center gap-3 px-3.5 py-2 rounded-xl text-xs font-medium transition-all",
+              isActive 
+                ? "bg-gradient-to-r from-[#D4A373]/20 to-[#E9C46A]/10 text-[#FAF7F2] border-l-2 border-[#D4A373] font-semibold shadow-sm" 
+                : "text-zinc-400 hover:text-[#FAF7F2] hover:bg-zinc-800/60"
+            )}
+          >
+            <BellRing className="w-4 h-4 text-[#D4A373]" />
+            <span>Alert Rules</span>
+          </NavLink>
+
+          <NavLink 
+            to="/admin/emergency" 
+            className={({ isActive }) => cn(
+              "flex items-center gap-3 px-3.5 py-2 rounded-xl text-xs font-medium transition-all",
+              isActive 
+                ? "bg-gradient-to-r from-[#D4A373]/20 to-[#E9C46A]/10 text-[#FAF7F2] border-l-2 border-[#D4A373] font-semibold shadow-sm" 
+                : "text-zinc-400 hover:text-[#FAF7F2] hover:bg-zinc-800/60"
+            )}
+          >
+            <Siren className="w-4 h-4 text-[#D4A373]" />
+            <span>Emergency Mode</span>
+          </NavLink>
+
+          <NavLink 
+            to="/admin/health" 
+            className={({ isActive }) => cn(
+              "flex items-center gap-3 px-3.5 py-2 rounded-xl text-xs font-medium transition-all",
+              isActive 
+                ? "bg-gradient-to-r from-[#D4A373]/20 to-[#E9C46A]/10 text-[#FAF7F2] border-l-2 border-[#D4A373] font-semibold shadow-sm" 
+                : "text-zinc-400 hover:text-[#FAF7F2] hover:bg-zinc-800/60"
+            )}
+          >
+            <Activity className="w-4 h-4 text-[#D4A373]" />
+            <span>System Health</span>
+          </NavLink>
         </nav>
         
         <div className="p-4 border-t border-zinc-800/80 bg-zinc-900/40">

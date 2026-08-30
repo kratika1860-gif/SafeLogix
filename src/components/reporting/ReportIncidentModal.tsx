@@ -52,10 +52,7 @@ export default function ReportIncidentModal({ onClose }: Props) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!currentLocation) {
-      setError('Cannot get GPS location. Required for reporting.');
-      return;
-    }
+    const targetLocation = currentLocation || [91.7850, 26.1450];
     if (!user) {
       setError('User not identified.');
       return;
@@ -65,7 +62,7 @@ export default function ReportIncidentModal({ onClose }: Props) {
       category,
       severity,
       description,
-      location: currentLocation,
+      location: targetLocation,
       photoUrls: photos,
       reporterId: user.id
     });
@@ -98,7 +95,7 @@ export default function ReportIncidentModal({ onClose }: Props) {
 
           <div className="flex items-center gap-2 text-xs font-semibold text-zinc-300 bg-[#18181B]/80 border border-[#D4A373]/20 p-2.5 rounded-xl">
             <MapPin className="w-4 h-4 text-[#E9C46A]" />
-            {currentLocation ? `GPS Logged: ${currentLocation[1].toFixed(4)}, ${currentLocation[0].toFixed(4)}` : 'Waiting for GPS...'}
+            {currentLocation ? `GPS Logged: ${currentLocation[1].toFixed(4)}, ${currentLocation[0].toFixed(4)}` : 'GPS (Depot Default): 26.1450, 91.7850'}
           </div>
 
           <div>
