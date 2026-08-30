@@ -1,0 +1,63 @@
+MongoDB connection error: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/
+    at _handleConnectionErrors (/app/applet/node_modules/mongoose/lib/connection.js:1175:11)
+    at NativeConnection.openUri (/app/applet/node_modules/mongoose/lib/connection.js:1106:11)
+    at async connectDB (/app/applet/src/db/mongo.ts:6:5)
+    at async startServer (/app/applet/server.ts:21:3) {
+  errorLabelSet: Set(0) {},
+  reason: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'ac-nlahzjl-shard-00-00.x8shtl5.mongodb.net:27017' => [ServerDescription],
+      'ac-nlahzjl-shard-00-01.x8shtl5.mongodb.net:27017' => [ServerDescription],
+      'ac-nlahzjl-shard-00-02.x8shtl5.mongodb.net:27017' => [ServerDescription]
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-pr6s9b-shard-0',
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  },
+  code: undefined,
+  cause: TopologyDescription {
+    type: 'ReplicaSetNoPrimary',
+    servers: Map(3) {
+      'ac-nlahzjl-shard-00-00.x8shtl5.mongodb.net:27017' => [ServerDescription],
+      'ac-nlahzjl-shard-00-01.x8shtl5.mongodb.net:27017' => [ServerDescription],
+      'ac-nlahzjl-shard-00-02.x8shtl5.mongodb.net:27017' => [ServerDescription]
+    },
+    stale: false,
+    compatible: true,
+    heartbeatFrequencyMS: 10000,
+    localThresholdMS: 15,
+    setName: 'atlas-pr6s9b-shard-0',
+    maxElectionId: null,
+    maxSetVersion: null,
+    commonWireVersion: 0,
+    logicalSessionTimeoutMinutes: null
+  }
+}
+WebSocket server error: Port 24678 is already in use
+node:events:497
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use 0.0.0.0:3000
+    at Server.setupListenHandle [as _listen2] (node:net:1941:16)
+    at listenInCluster (node:net:1998:12)
+    at node:net:2207:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1977:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '0.0.0.0',
+  port: 3000
+}
+
+Node.js v22.23.2

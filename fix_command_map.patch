@@ -1,0 +1,123 @@
+--- src/pages/admin/CommandMap.tsx
++++ src/pages/admin/CommandMap.tsx
+@@ -1,6 +1,6 @@
+ import React, { useState, useEffect, useRef, useMemo } from 'react';
+ import { Source, Layer, Marker, NavigationControl, MapRef } from 'react-map-gl/maplibre';
+-import BaseMap from '../../components/map/BaseMap';
++import GISMap from '../../components/map/GISMap';
+ import 'maplibre-gl/dist/maplibre-gl.css';
+ import { Filter, Layers, AlertTriangle, Truck, Package, Activity, Info, CheckCircle, XCircle, AlertCircle, ShieldAlert, Navigation, Map as MapIcon, ChevronDown, ChevronRight, BarChart2, CloudRain, Thermometer, Wind } from 'lucide-react';
+ import { cn } from '../../lib/utils';
+@@ -259,112 +259,7 @@
+       
+       {/* Map Area */}
+       <div className="flex-1 relative">
+-        <BaseMap
+-          ref={mapRef}
+-          
+-          initialViewState={{
+-            longitude: currentLocation ? currentLocation[0] : 114.1694,
+-            latitude: currentLocation ? currentLocation[1] : 22.3193,
+-            zoom: 10
+-          }}
+-          
+-          
+-        >
+-          {/* Current Location Marker */}
+-          {currentLocation && (
+-            <Marker longitude={currentLocation[0]} latitude={currentLocation[1]}>
+-              <div className="relative flex items-center justify-center w-8 h-8">
+-                <div className="absolute w-full h-full bg-blue-500 rounded-full opacity-30 animate-ping" />
+-                <div className="w-4 h-4 bg-blue-600 border-2 border-white rounded-full z-10" />
+-              </div>
+-            </Marker>
+-          )}
+-          
+-          {/* Precipitation Radar Layer (Mock) */}
+-          {filters.weather && (
+-            <Source id="precipitation" type="geojson" data={mockPrecipitation as any}>
+-              <Layer
+-                id="precipitation-layer"
+-                type="fill"
+-                paint={{
+-                  'fill-color': [
+-                    'interpolate',
+-                    ['linear'],
+-                    ['get', 'intensity'],
+-                    10, '#3b82f6', // Light rain
+-                    30, '#eab308', // Moderate rain
+-                    50, '#ef4444'  // Heavy rain
+-                  ],
+-                  'fill-opacity': 0.4
+-                }}
+-              />
+-            </Source>
+-          )}
+-
+-          {/* Active Routes */}
+-          {filters.routes && (
+-            <Source id="routes" type="geojson" data={mockRoutes as any}>
+-              <Layer
+-                id="routes-layer"
+-                type="line"
+-                paint={{
+-                  'line-color': [
+-                    'match',
+-                    ['get', 'accessibilityState'],
+-                    'Open', '#22c55e',
+-                    'Partially Accessible', '#eab308',
+-                    'Congested', '#f97316',
+-                    'High Risk', '#ef4444',
+-                    'Restricted', '#991b1b',
+-                    'Closed', '#000000',
+-                    '#9ca3af' // Unknown
+-                  ],
+-                  'line-width': 5,
+-                  'line-opacity': 0.8
+-                }}
+-              />
+-            </Source>
+-          )}
+-
+-          {/* Incidents */}
+-          {filters.incidents && mockIncidents.map((incident) => (
+-            <Marker
+-              key={incident.id}
+-              longitude={incident.location[0]}
+-              latitude={incident.location[1]}
+-              anchor="bottom"
+-            >
+-              <div className="group cursor-pointer">
+-                <div className="bg-white p-1 rounded-full shadow-md border-2 border-red-500">
+-                  <AlertTriangle className="w-5 h-5 text-red-500" />
+-                </div>
+-                {/* Tooltip */}
+-                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:block w-48 bg-gray-900 text-white text-xs p-2 rounded shadow-xl z-50">
+-                  <p className="font-bold">{incident.type.toUpperCase()}</p>
+-                  <p>{incident.description}</p>
+-                </div>
+-              </div>
+-            </Marker>
+-          ))}
+-
+-          {/* Vehicles */}
+-          {filters.vehicles && mockVehicles.map((vehicle) => (
+-            <Marker
+-              key={vehicle.id}
+-              longitude={vehicle.location[0]}
+-              latitude={vehicle.location[1]}
+-              anchor="center"
+-            >
+-              <div 
+-                className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center border-2 border-white shadow-md cursor-pointer transition-transform hover:scale-110"
+-                style={{ transform: `rotate(${vehicle.heading}deg)` }}
+-              >
+-                <Truck className="w-4 h-4 text-white" />
+-              </div>
+-            </Marker>
+-          ))}
+-        </BaseMap>
++        <GISMap />
+         
+         {/* LEFT PANEL: Environmental Intelligence Overlay (Absolute) */}
+         {filters.weather && (

@@ -1,0 +1,63 @@
+{
+  "app": {
+    "title": "LogisticsOps",
+    "driver_portal": "Driver Portal",
+    "dashboard": "Dashboard",
+    "active_trip": "Active Trip",
+    "check_routes": "Check Routes",
+    "profile": "Profile",
+    "settings": "Settings",
+    "sign_out": "Sign Out",
+    "home": "Home",
+    "trip": "Trip",
+    "routes": "Routes",
+    "welcome": "Welcome back",
+    "on_duty": "On Duty",
+    "off_duty": "Observing / Off-Duty",
+    "go_on_duty": "Go On-Duty",
+    "go_off_duty": "Go Off-Duty",
+    "report_incident": "Report Incident",
+    "emergency": "Emergency",
+    "emergency_action": "Emergency Action",
+    "offline_sync": "Offline Sync",
+    "gps_issue": "GPS Issue",
+    "access_denied": "Access Denied. Please log in."
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "language_desc": "Choose your preferred language",
+    "notifications": "Notifications",
+    "notifications_desc": "Manage alert and notification preferences",
+    "gps": "GPS & Tracking",
+    "gps_desc": "Location tracking preferences",
+    "map": "Map Preferences",
+    "map_desc": "Map display and layer settings",
+    "offline_storage": "Offline Storage",
+    "offline_storage_desc": "View and manage pending sync items",
+    "save": "Save Settings",
+    "saved": "Settings Saved!"
+  },
+  "profile": {
+    "title": "Driver Profile",
+    "role": "Role",
+    "contact": "Contact",
+    "status": "Account Status",
+    "assigned_vehicle": "Assigned Vehicle",
+    "no_vehicle": "No vehicle assigned",
+    "license": "License Plate"
+  },
+  "offline_queue": {
+    "title": "Offline Sync Queue",
+    "pending": "Pending",
+    "syncing": "Syncing...",
+    "synced": "Synced",
+    "failed": "Failed",
+    "incident_reports": "Incident Reports",
+    "gps_points": "GPS Points",
+    "delivery_updates": "Delivery Updates",
+    "images": "Images",
+    "emergency_reports": "Emergency Reports",
+    "no_pending": "All items are synced with the server."
+  }
+}

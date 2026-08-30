@@ -1,0 +1,79 @@
+--- src/pages/admin/CommandMap.tsx
++++ src/pages/admin/CommandMap.tsx
+@@ -73,15 +73,7 @@
+   const [selectedDistrictId, setSelectedDistrictId] = useState<string | null>(null);
+   const [showFilters, setShowFilters] = useState(true);
+   const [showGaps, setShowGaps] = useState(true);
+-  const { theme, currentLocation } = useAppStore();
+-  const [filters, setFilters] = useState({
+-    state: 'All',
+-    district: 'All',
+-    incidents: true,
+-    vehicles: true,
+-    routes: true,
+-    weather: true,
+-    risk: 'All',
+-    time: '24h'
+-  });
++  
++  const { layers, toggleLayer, filters, setFilter } = useMapStore();
+ 
+   const selectedDistrict = MOCK_DISTRICTS.find(d => d.id === selectedDistrictId);
+@@ -166,40 +158,40 @@
+               <label className="flex items-center gap-2 text-sm">
+                 <input 
+                   type="checkbox" 
+-                  checked={filters.incidents} 
+-                  onChange={(e) => setFilters({...filters, incidents: e.target.checked})}
++                  checked={layers.accidents || layers.landslides || layers.floods} 
++                  onChange={() => { toggleLayer('accidents'); toggleLayer('landslides'); toggleLayer('floods'); toggleLayer('roadClosures'); }}
+                   className="rounded text-blue-600" 
+                 />
+                 <span>Active Incidents</span>
+               </label>
+               <label className="flex items-center gap-2 text-sm">
+                 <input 
+                   type="checkbox" 
+-                  checked={filters.vehicles} 
+-                  onChange={(e) => setFilters({...filters, vehicles: e.target.checked})}
++                  checked={layers.vehicles} 
++                  onChange={() => toggleLayer('vehicles')}
+                   className="rounded text-blue-600" 
+                 />
+                 <span>Active Vehicles</span>
+               </label>
+               <label className="flex items-center gap-2 text-sm">
+                 <input 
+                   type="checkbox" 
+-                  checked={filters.routes} 
+-                  onChange={(e) => setFilters({...filters, routes: e.target.checked})}
++                  checked={layers.routes} 
++                  onChange={() => toggleLayer('routes')}
+                   className="rounded text-blue-600" 
+                 />
+                 <span>Standard Routes</span>
+               </label>
+               <label className="flex items-center gap-2 text-sm mt-2">
+                 <input 
+                   type="checkbox" 
+-                  checked={filters.weather} 
+-                  onChange={(e) => setFilters({...filters, weather: e.target.checked})}
++                  checked={layers.weatherRisk} 
++                  onChange={() => toggleLayer('weatherRisk')}
+                   className="rounded text-blue-600" 
+                 />
+                 <span className="flex items-center gap-1 font-semibold text-blue-600 dark:text-blue-400">
+                   <CloudRain className="w-3.5 h-3.5" /> Weather Radar
+                 </span>
+               </label>
+             </div>
+           </div>
+@@ -262,7 +254,7 @@
+         <GISMap />
+         
+         {/* LEFT PANEL: Environmental Intelligence Overlay (Absolute) */}
+-        {filters.weather && (
++        {layers.weatherRisk && (
+           <div className="absolute top-4 left-4 w-72 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md rounded-xl shadow-xl border border-blue-200 dark:border-blue-800 overflow-hidden flex flex-col z-10 animate-in fade-in slide-in-from-left-4 pointer-events-auto">
+             <div className="p-3 bg-blue-50/80 dark:bg-blue-900/40 border-b border-blue-100 dark:border-blue-800 flex items-center justify-between">
+               <h3 className="text-sm font-bold text-blue-900 dark:text-blue-100 flex items-center gap-2">

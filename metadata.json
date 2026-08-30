@@ -1,0 +1,6 @@
+{
+  "name": "Disaster Logistics & Fleet Management",
+  "description": "Real-time emergency fleet tracking, driver dispatch, SOS alerts, and incident response platform.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
