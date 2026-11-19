@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import { db } from './src/db/index.ts';
 import { users, driverProfiles, profiles, vehicles, trips, fieldReports, emergencyReports, alerts } from './src/db/schema.ts';
 import { eq } from 'drizzle-orm';

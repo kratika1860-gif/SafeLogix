@@ -1,0 +1,121 @@
+id,uid,email,role,full_name,phone,license_number,duty_status,latitude,longitude,created_at
+1,dev-mock-admin-uid,admin@safelogix.gov.in,admin,HQ Command North East Division,+91 361 2234001,,,,,2026-11-17T13:23:03.798Z
+2,officer-ner-2,lobsang.ralte@assam.gov.in,district_officer,Lobsang Ralte (Assam),+91 7468229709,,,,,2026-11-17T13:23:03.798Z
+3,officer-ner-3,biraj.saikia@meghalaya.gov.in,logistics_coordinator,Biraj Saikia (Meghalaya),+91 7704188099,,,,,2026-11-17T13:23:03.798Z
+4,officer-ner-4,nayan.ao@arunachalpradesh.gov.in,district_officer,Nayan Ao (Arunachal Pradesh),+91 7403557512,,,,,2026-11-17T13:23:03.798Z
+5,officer-ner-5,zoram.saikia@sikkim.gov.in,logistics_coordinator,Zoram Saikia (Sikkim),+91 9915179637,,,,,2026-11-17T13:23:03.798Z
+6,officer-ner-6,pema.jamir@nagaland.gov.in,district_officer,Pema Jamir (Nagaland),+91 7862951898,,,,,2026-11-17T13:23:03.798Z
+7,officer-ner-7,imkong.borah@manipur.gov.in,logistics_coordinator,Imkong Borah (Manipur),+91 8903099919,,,,,2026-11-17T13:23:03.798Z
+8,officer-ner-8,animesh.reang@mizoram.gov.in,district_officer,Animesh Reang (Mizoram),+91 7443246095,,,,,2026-11-17T13:23:03.798Z
+9,officer-ner-9,neiphiu.sangma@tripura.gov.in,logistics_coordinator,Neiphiu Sangma (Tripura),+91 9045938585,,,,,2026-11-17T13:23:03.798Z
+10,officer-ner-10,dorjee.jamir@assam.gov.in,district_officer,Dorjee Jamir (Assam),+91 7386670416,,,,,2026-11-17T13:23:03.798Z
+11,officer-ner-11,zoram.sailo@meghalaya.gov.in,logistics_coordinator,Zoram Sailo (Meghalaya),+91 7269954555,,,,,2026-11-17T13:23:03.798Z
+12,officer-ner-12,lobsang.singh@arunachalpradesh.gov.in,district_officer,Lobsang Singh (Arunachal Pradesh),+91 9884599339,,,,,2026-11-17T13:23:03.798Z
+13,officer-ner-13,deben.chakma@sikkim.gov.in,logistics_coordinator,Deben Chakma (Sikkim),+91 9291261299,,,,,2026-11-17T13:23:03.798Z
+14,officer-ner-14,kalyan.sangma@nagaland.gov.in,district_officer,Kalyan Sangma (Nagaland),+91 9647268449,,,,,2026-11-17T13:23:03.798Z
+15,officer-ner-15,khogen.barman@manipur.gov.in,logistics_coordinator,Khogen Barman (Manipur),+91 7207292179,,,,,2026-11-17T13:23:03.798Z
+16,officer-ner-16,saurav.bhutia@mizoram.gov.in,district_officer,Saurav Bhutia (Mizoram),+91 7141415284,,,,,2026-11-17T13:23:03.798Z
+17,driver-ner-17,driver17@safelogix.ner.gov.in,driver,Khogen Bhutia [Arunachal Pradesh],+91 9435823365,ML-87-2019006002,on_duty,27.11310,93.65150,2026-11-17T13:23:03.798Z
+18,driver-ner-18,driver18@safelogix.ner.gov.in,driver,Dorjee Lepcha [Arunachal Pradesh],+91 9435584970,AR-73-2018003218,on_duty,27.55960,91.82390,2026-11-17T13:23:03.798Z
+19,driver-ner-19,driver19@safelogix.ner.gov.in,driver,Animesh Jamir [Arunachal Pradesh],+91 9435655254,SK-11-2019004550,on_duty,27.22080,92.37720,2026-11-17T13:23:03.798Z
+20,driver-ner-20,driver20@safelogix.ner.gov.in,driver,Dorjee Reang [Arunachal Pradesh],+91 9435869845,NL-25-2017002213,off_duty,28.03090,95.35610,2026-11-17T13:23:03.798Z
+21,driver-ner-21,driver21@safelogix.ner.gov.in,driver,Imkong Deka [Arunachal Pradesh],+91 9435952026,MN-73-2024009141,off_duty,27.50180,93.78370,2026-11-17T13:23:03.798Z
+22,driver-ner-22,driver22@safelogix.ner.gov.in,driver,Manoj Wangchuk [Arunachal Pradesh],+91 9435859312,MZ-88-2024001590,off_duty,27.31850,92.21240,2026-11-17T13:23:03.798Z
+23,driver-ner-23,driver23@safelogix.ner.gov.in,driver,Kalyan Ao [Arunachal Pradesh],+91 9435442726,TR-92-2018003610,on_duty,27.52610,92.10660,2026-11-17T13:23:03.798Z
+24,driver-ner-24,driver24@safelogix.ner.gov.in,driver,Biraj Lepcha [Sikkim],+91 9435922414,AS-24-2021001111,on_duty,27.36220,88.64990,2026-11-17T13:23:03.798Z
+25,driver-ner-25,driver25@safelogix.ner.gov.in,driver,Lalhming Wangchuk [Sikkim],+91 9435333152,ML-34-2019003996,on_duty,27.18340,88.50250,2026-11-17T13:23:03.798Z
+26,driver-ner-26,driver26@safelogix.ner.gov.in,driver,Ngurang Ao [Sikkim],+91 9435912797,AR-32-2021006171,off_duty,27.19180,88.51170,2026-11-17T13:23:03.798Z
+27,driver-ner-27,driver27@safelogix.ner.gov.in,driver,Zoram Debbarma [Sikkim],+91 9435604678,SK-94-2020001598,off_duty,27.18010,88.35940,2026-11-17T13:23:03.798Z
+28,driver-ner-28,driver28@safelogix.ner.gov.in,driver,Manoj Deka [Sikkim],+91 9435747526,NL-44-2022002499,on_duty,27.50390,88.56270,2026-11-17T13:23:03.798Z
+29,driver-ner-29,driver29@safelogix.ner.gov.in,driver,Neiphiu Kalita [Sikkim],+91 9435998090,MN-28-2016005199,on_duty,27.01400,88.46520,2026-11-17T13:23:03.798Z
+30,driver-ner-30,driver30@safelogix.ner.gov.in,driver,Subhash Nath [Sikkim],+91 9435740982,MZ-66-2022009308,on_duty,27.13800,88.48270,2026-11-17T13:23:03.798Z
+31,driver-ner-31,driver31@safelogix.ner.gov.in,driver,Lobsang Angami [Nagaland],+91 9435800811,TR-33-2023008655,on_duty,25.71030,94.12220,2026-11-17T13:23:03.798Z
+32,driver-ner-32,driver32@safelogix.ner.gov.in,driver,Thangjam Marak [Nagaland],+91 9435163706,AS-74-2015007590,off_duty,25.89460,93.70660,2026-11-17T13:23:03.798Z
+33,driver-ner-33,driver33@safelogix.ner.gov.in,driver,Wangkhem Chakma [Nagaland],+91 9435851992,ML-46-2020007490,off_duty,26.32200,94.51550,2026-11-17T13:23:03.798Z
+34,driver-ner-34,driver34@safelogix.ner.gov.in,driver,Saurav Barman [Nagaland],+91 9435964129,AR-19-2023005368,on_duty,26.08380,94.28220,2026-11-17T13:23:03.798Z
+35,driver-ner-35,driver35@safelogix.ner.gov.in,driver,Zoram Lepcha [Nagaland],+91 9435810907,SK-35-2019007828,off_duty,25.80690,93.92090,2026-11-17T13:23:03.798Z
+36,driver-ner-36,driver36@safelogix.ner.gov.in,driver,Kalyan Reang [Nagaland],+91 9435523945,NL-91-2019001327,on_duty,25.61360,94.32490,2026-11-17T13:23:03.798Z
+37,driver-ner-37,driver37@safelogix.ner.gov.in,driver,Zoram Kamei [Manipur],+91 9435546756,MN-64-2016002569,on_duty,24.82130,93.88700,2026-11-17T13:23:03.798Z
+38,driver-ner-38,driver38@safelogix.ner.gov.in,driver,Dorjee Kalita [Manipur],+91 9435533944,MZ-55-2017004891,on_duty,24.34870,93.65030,2026-11-17T13:23:03.798Z
+39,driver-ner-39,driver39@safelogix.ner.gov.in,driver,Thangjam Angami [Manipur],+91 9435919298,TR-62-2016001814,on_duty,25.30390,94.03420,2026-11-17T13:23:03.798Z
+40,driver-ner-40,driver40@safelogix.ner.gov.in,driver,Biraj Angami [Manipur],+91 9435874123,AS-14-2018006555,on_duty,25.10680,94.33820,2026-11-17T13:23:03.798Z
+41,driver-ner-41,driver41@safelogix.ner.gov.in,driver,Khogen Marak [Manipur],+91 9435931102,ML-46-2018005832,off_duty,24.22290,94.35270,2026-11-17T13:23:03.798Z
+42,driver-ner-42,driver42@safelogix.ner.gov.in,driver,Manoj Gogoi [Manipur],+91 9435229406,AR-20-2023003445,on_duty,24.79290,93.08390,2026-11-17T13:23:03.798Z
+43,driver-ner-43,driver43@safelogix.ner.gov.in,driver,Subhash Ao [Mizoram],+91 9435949397,SK-40-2022004564,on_duty,23.73560,92.70080,2026-11-17T13:23:03.798Z
+44,driver-ner-44,driver44@safelogix.ner.gov.in,driver,Animesh Barman [Mizoram],+91 9435140671,NL-72-2015007268,on_duty,22.84650,92.73540,2026-11-17T13:23:03.798Z
+45,driver-ner-45,driver45@safelogix.ner.gov.in,driver,Wangkhem Barman [Mizoram],+91 9435171955,MN-68-2023004685,on_duty,23.44900,93.31690,2026-11-17T13:23:03.798Z
+46,driver-ner-46,driver46@safelogix.ner.gov.in,driver,Zoram Kalita [Mizoram],+91 9435616190,MZ-38-2020001782,on_duty,24.18850,92.71690,2026-11-17T13:23:03.798Z
+47,driver-ner-47,driver47@safelogix.ner.gov.in,driver,Bikash Ronghang [Mizoram],+91 9435831865,TR-97-2016005939,on_duty,23.81000,92.64110,2026-11-17T13:23:03.798Z
+48,driver-ner-48,driver48@safelogix.ner.gov.in,driver,Nayan Nath [Mizoram],+91 9435860047,AS-14-2023004487,on_duty,24.51100,92.71530,2026-11-17T13:23:03.798Z
+49,driver-ner-49,driver49@safelogix.ner.gov.in,driver,Zoram Wangchuk [Tripura],+91 9435140785,ML-34-2024001422,off_duty,23.85780,91.30970,2026-11-17T13:23:03.798Z
+50,driver-ner-50,driver50@safelogix.ner.gov.in,driver,Pritam Gogoi [Tripura],+91 9435379346,AR-87-2022002531,on_duty,24.34890,92.18410,2026-11-17T13:23:03.798Z
+51,driver-ner-51,driver51@safelogix.ner.gov.in,driver,Rongsen Saikia [Tripura],+91 9435638067,SK-26-2018002750,off_duty,23.53160,91.46650,2026-11-17T13:23:03.798Z
+52,driver-ner-52,driver52@safelogix.ner.gov.in,driver,Pritam Ronghang [Tripura],+91 9435403786,NL-80-2017006504,off_duty,23.90660,91.85170,2026-11-17T13:23:03.798Z
+53,driver-ner-53,driver53@safelogix.ner.gov.in,driver,Lobsang Saikia [Tripura],+91 9435725099,MN-47-2024003478,on_duty,24.50150,92.21330,2026-11-17T13:23:03.798Z
+54,driver-ner-54,driver54@safelogix.ner.gov.in,driver,Neiphiu Ao [Assam],+91 9435725449,MZ-82-2017003570,off_duty,26.14580,91.69980,2026-11-17T13:23:03.798Z
+55,driver-ner-55,driver55@safelogix.ner.gov.in,driver,Kalyan Sailo [Assam],+91 9435335250,TR-79-2020009395,on_duty,26.12210,91.89940,2026-11-17T13:23:03.798Z
+56,driver-ner-56,driver56@safelogix.ner.gov.in,driver,Nayan Sailo [Assam],+91 9435179282,AS-96-2020003418,on_duty,24.86090,92.73750,2026-11-17T13:23:03.798Z
+57,driver-ner-57,driver57@safelogix.ner.gov.in,driver,Rajesh Reang [Assam],+91 9435737278,ML-24-2024002155,on_duty,27.48800,94.89790,2026-11-17T13:23:03.798Z
+58,driver-ner-58,driver58@safelogix.ner.gov.in,driver,Rongsen Kamei [Assam],+91 9435501963,AR-22-2023004155,on_duty,26.75310,94.20850,2026-11-17T13:23:03.798Z
+59,driver-ner-59,driver59@safelogix.ner.gov.in,driver,Manoj Nath [Assam],+91 9435692001,SK-72-2022008497,on_duty,26.64290,92.74580,2026-11-17T13:23:03.798Z
+60,driver-ner-60,driver60@safelogix.ner.gov.in,driver,Pritam Barman [Assam],+91 9435233545,NL-16-2017009984,off_duty,26.53190,90.51400,2026-11-17T13:23:03.798Z
+61,driver-ner-61,driver61@safelogix.ner.gov.in,driver,Pema Gogoi [Assam],+91 9435934230,MN-10-2020009558,on_duty,25.15160,93.05330,2026-11-17T13:23:03.798Z
+62,driver-ner-62,driver62@safelogix.ner.gov.in,driver,Imkong Ao [Assam],+91 9435563592,MZ-46-2023002977,on_duty,25.84370,93.46600,2026-11-17T13:23:03.798Z
+63,driver-ner-63,driver63@safelogix.ner.gov.in,driver,Rajesh Angami [Assam],+91 9435714376,TR-70-2024001691,off_duty,27.48720,95.40630,2026-11-17T13:23:03.798Z
+64,driver-ner-64,driver64@safelogix.ner.gov.in,driver,Rajesh Barman [Meghalaya],+91 9435718736,AS-56-2019006100,on_duty,25.59400,91.85330,2026-11-17T13:23:03.798Z
+65,driver-ner-65,driver65@safelogix.ner.gov.in,driver,Saurav Ao [Meghalaya],+91 9435434876,ML-59-2021009235,off_duty,25.24820,91.73330,2026-11-17T13:23:03.798Z
+66,driver-ner-66,driver66@safelogix.ner.gov.in,driver,Pema Ronghang [Meghalaya],+91 9435935891,AR-89-2017006941,off_duty,25.45400,92.23360,2026-11-17T13:23:03.798Z
+67,driver-ner-67,driver67@safelogix.ner.gov.in,driver,Khogen Sangma [Meghalaya],+91 9435732932,SK-32-2019004409,off_duty,25.46790,90.22470,2026-11-17T13:23:03.798Z
+68,driver-ner-68,driver68@safelogix.ner.gov.in,driver,Dorjee Lepcha [Meghalaya],+91 9435519290,NL-73-2015003718,on_duty,25.47230,91.29630,2026-11-17T13:23:03.798Z
+69,driver-ner-69,driver69@safelogix.ner.gov.in,driver,Lalhming Ao [Meghalaya],+91 9435372401,MN-78-2015004462,on_duty,25.90940,91.92470,2026-11-17T13:23:03.798Z
+70,driver-ner-70,driver70@safelogix.ner.gov.in,driver,Biraj Lepcha [Meghalaya],+91 9435337810,MZ-68-2018008649,on_duty,25.15710,92.00220,2026-11-17T13:23:03.798Z
+71,driver-ner-71,driver71@safelogix.ner.gov.in,driver,Saurav Sangma [Arunachal Pradesh],+91 9435643872,TR-31-2016003905,on_duty,27.12030,93.62990,2026-11-17T13:23:03.798Z
+72,driver-ner-72,driver72@safelogix.ner.gov.in,driver,Manoj Chakma [Arunachal Pradesh],+91 9435317043,AS-36-2023007956,on_duty,27.56900,91.89200,2026-11-17T13:23:03.798Z
+73,driver-ner-73,driver73@safelogix.ner.gov.in,driver,Imkong Nath [Arunachal Pradesh],+91 9435672195,ML-49-2017008075,on_duty,27.26710,92.39240,2026-11-17T13:23:03.798Z
+74,driver-ner-74,driver74@safelogix.ner.gov.in,driver,Lalhming Zhimomi [Arunachal Pradesh],+91 9435417473,AR-19-2022009236,on_duty,28.08750,95.31500,2026-11-17T13:23:03.798Z
+75,driver-ner-75,driver75@safelogix.ner.gov.in,driver,Subhash Bhutia [Arunachal Pradesh],+91 9435957408,SK-27-2024006124,off_duty,27.49090,93.80410,2026-11-17T13:23:03.798Z
+76,driver-ner-76,driver76@safelogix.ner.gov.in,driver,Pema Wangchuk [Arunachal Pradesh],+91 9435236900,NL-49-2021008364,on_duty,27.33990,92.21830,2026-11-17T13:23:03.798Z
+77,driver-ner-77,driver77@safelogix.ner.gov.in,driver,Pema Nath [Arunachal Pradesh],+91 9435856837,MN-72-2018004721,off_duty,27.54810,92.09550,2026-11-17T13:23:03.798Z
+78,driver-ner-78,driver78@safelogix.ner.gov.in,driver,Animesh Sailo [Sikkim],+91 9435311509,MZ-29-2022008126,on_duty,27.35530,88.61810,2026-11-17T13:23:03.798Z
+79,driver-ner-79,driver79@safelogix.ner.gov.in,driver,Pema Nath [Sikkim],+91 9435408658,TR-52-2021007664,on_duty,27.14320,88.52760,2026-11-17T13:23:03.798Z
+80,driver-ner-80,driver80@safelogix.ner.gov.in,driver,Rajesh Borah [Sikkim],+91 9435449186,AS-70-2017001842,on_duty,27.19960,88.47540,2026-11-17T13:23:03.798Z
+81,driver-ner-81,driver81@safelogix.ner.gov.in,driver,Subhash Bhutia [Sikkim],+91 9435343609,ML-67-2022008774,on_duty,27.19320,88.36890,2026-11-17T13:23:03.798Z
+82,driver-ner-82,driver82@safelogix.ner.gov.in,driver,Imkong Gogoi [Sikkim],+91 9435802713,AR-19-2019007840,on_duty,27.51670,88.51730,2026-11-17T13:23:03.798Z
+83,driver-ner-83,driver83@safelogix.ner.gov.in,driver,Rongsen Saikia [Sikkim],+91 9435738647,SK-88-2020009339,on_duty,27.08660,88.38340,2026-11-17T13:23:03.798Z
+84,driver-ner-84,driver84@safelogix.ner.gov.in,driver,Neiphiu Marak [Sikkim],+91 9435327039,NL-93-2023007360,on_duty,27.08990,88.43820,2026-11-17T13:23:03.798Z
+85,driver-ner-85,driver85@safelogix.ner.gov.in,driver,Wangkhem Sangma [Nagaland],+91 9435231450,MN-41-2019004683,off_duty,25.68400,94.10830,2026-11-17T13:23:03.798Z
+86,driver-ner-86,driver86@safelogix.ner.gov.in,driver,Imkong Jamir [Nagaland],+91 9435783155,MZ-52-2015008675,off_duty,25.93720,93.73960,2026-11-17T13:23:03.798Z
+87,driver-ner-87,driver87@safelogix.ner.gov.in,driver,Thangjam Marak [Nagaland],+91 9435108359,TR-56-2017004990,on_duty,26.35930,94.51080,2026-11-17T13:23:03.798Z
+88,driver-ner-88,driver88@safelogix.ner.gov.in,driver,Animesh Chakma [Nagaland],+91 9435248252,AS-23-2024003906,off_duty,26.12040,94.24490,2026-11-17T13:23:03.798Z
+89,driver-ner-89,driver89@safelogix.ner.gov.in,driver,Lobsang Gogoi [Nagaland],+91 9435713972,ML-73-2018007144,off_duty,25.83720,93.90180,2026-11-17T13:23:03.798Z
+90,driver-ner-90,driver90@safelogix.ner.gov.in,driver,Rongsen Nath [Nagaland],+91 9435147512,AR-42-2022008793,on_duty,25.53680,94.28050,2026-11-17T13:23:03.798Z
+91,driver-ner-91,driver91@safelogix.ner.gov.in,driver,Bikash Sailo [Manipur],+91 9435428159,SK-34-2024006516,on_duty,24.77000,93.97240,2026-11-17T13:23:03.798Z
+92,driver-ner-92,driver92@safelogix.ner.gov.in,driver,Deben Marak [Manipur],+91 9435738304,NL-72-2022001641,off_duty,24.36100,93.69650,2026-11-17T13:23:03.798Z
+93,driver-ner-93,driver93@safelogix.ner.gov.in,driver,Kalyan Reang [Manipur],+91 9435679431,MN-60-2020002892,on_duty,25.24710,94.02360,2026-11-17T13:23:03.798Z
+94,driver-ner-94,driver94@safelogix.ner.gov.in,driver,Zoram Wangchuk [Manipur],+91 9435693146,MZ-11-2020001059,off_duty,25.11720,94.35320,2026-11-17T13:23:03.798Z
+95,driver-ner-95,driver95@safelogix.ner.gov.in,driver,Thangjam Kalita [Manipur],+91 9435123649,TR-75-2021008829,off_duty,24.20620,94.32700,2026-11-17T13:23:03.798Z
+96,driver-ner-96,driver96@safelogix.ner.gov.in,driver,Manoj Angami [Manipur],+91 9435974235,AS-42-2022005179,off_duty,24.75410,93.14900,2026-11-17T13:23:03.798Z
+97,driver-ner-97,driver97@safelogix.ner.gov.in,driver,Khogen Gogoi [Mizoram],+91 9435804071,ML-98-2022004132,off_duty,23.68330,92.69990,2026-11-17T13:23:03.798Z
+98,driver-ner-98,driver98@safelogix.ner.gov.in,driver,Rajesh Ralte [Mizoram],+91 9435930669,AR-74-2018007282,on_duty,22.89150,92.73560,2026-11-17T13:23:03.798Z
+99,driver-ner-99,driver99@safelogix.ner.gov.in,driver,Kalyan Lepcha [Mizoram],+91 9435968659,SK-64-2017003710,on_duty,23.49960,93.31060,2026-11-17T13:23:03.798Z
+100,driver-ner-100,driver100@safelogix.ner.gov.in,driver,Dorjee Ao [Mizoram],+91 9435405427,NL-26-2015009197,on_duty,24.20610,92.65450,2026-11-17T13:23:03.798Z
+101,driver-ner-101,driver101@safelogix.ner.gov.in,driver,Imkong Gogoi [Mizoram],+91 9435499540,MN-19-2017006259,on_duty,23.74830,92.60510,2026-11-17T13:23:03.798Z
+102,driver-ner-102,driver102@safelogix.ner.gov.in,driver,Bikash Wangchuk [Mizoram],+91 9435863588,MZ-94-2015005756,off_duty,24.50750,92.76930,2026-11-17T13:23:03.798Z
+103,driver-ner-103,driver103@safelogix.ner.gov.in,driver,Zoram Kalita [Tripura],+91 9435704857,TR-90-2023002038,off_duty,23.81200,91.31560,2026-11-17T13:23:03.798Z
+104,driver-ner-104,driver104@safelogix.ner.gov.in,driver,Thangjam Debbarma [Tripura],+91 9435792821,AS-20-2017006724,off_duty,24.38970,92.12940,2026-11-17T13:23:03.798Z
+105,driver-ner-105,driver105@safelogix.ner.gov.in,driver,Manoj Kamei [Tripura],+91 9435652163,ML-58-2021009257,off_duty,23.52380,91.45300,2026-11-17T13:23:03.798Z
+106,driver-ner-106,driver106@safelogix.ner.gov.in,driver,Subhash Angami [Tripura],+91 9435222570,AR-87-2018008907,on_duty,23.88210,91.85990,2026-11-17T13:23:03.798Z
+107,driver-ner-107,driver107@safelogix.ner.gov.in,driver,Animesh Barman [Tripura],+91 9435806575,SK-39-2022002530,off_duty,24.46000,92.25870,2026-11-17T13:23:03.798Z
+108,driver-ner-108,driver108@safelogix.ner.gov.in,driver,Subhash Chakma [Assam],+91 9435876481,NL-89-2024001804,off_duty,26.15820,91.76810,2026-11-17T13:23:03.798Z
+109,driver-ner-109,driver109@safelogix.ner.gov.in,driver,Saurav Zhimomi [Assam],+91 9435326387,MN-20-2016004974,on_duty,26.14280,91.90710,2026-11-17T13:23:03.798Z
+110,driver-ner-110,driver110@safelogix.ner.gov.in,driver,Kalyan Sangma [Assam],+91 9435588647,MZ-39-2018005682,off_duty,24.82330,92.75060,2026-11-17T13:23:03.798Z
+111,driver-ner-111,driver111@safelogix.ner.gov.in,driver,Manoj Borah [Assam],+91 9435589813,TR-44-2022004553,on_duty,27.45380,94.86340,2026-11-17T13:23:03.798Z
+112,driver-ner-112,driver112@safelogix.ner.gov.in,driver,Bikash Ao [Assam],+91 9435503250,AS-46-2023005017,off_duty,26.79970,94.22050,2026-11-17T13:23:03.798Z
+113,driver-ner-113,driver113@safelogix.ner.gov.in,driver,Biraj Deka [Assam],+91 9435904172,ML-66-2021008914,on_duty,26.67740,92.83130,2026-11-17T13:23:03.798Z
+114,driver-ner-114,driver114@safelogix.ner.gov.in,driver,Lalhming Angami [Assam],+91 9435694051,AR-90-2016005082,on_duty,26.54530,90.54810,2026-11-17T13:23:03.798Z
+115,driver-ner-115,driver115@safelogix.ner.gov.in,driver,Deben Wangchuk [Assam],+91 9435491034,SK-44-2024005272,on_duty,25.16060,93.04920,2026-11-17T13:23:03.798Z
+116,driver-ner-116,driver116@safelogix.ner.gov.in,driver,Dorjee Debbarma [Assam],+91 9435586322,NL-23-2018002314,on_duty,25.87400,93.46730,2026-11-17T13:23:03.798Z
+117,driver-ner-117,driver117@safelogix.ner.gov.in,driver,Zoram Ralte [Assam],+91 9435560096,MN-99-2020009575,off_duty,27.47890,95.37300,2026-11-17T13:23:03.798Z
+118,driver-ner-118,driver118@safelogix.ner.gov.in,driver,Nayan Singh [Meghalaya],+91 9435398554,MZ-11-2023001965,off_duty,25.60150,91.93640,2026-11-17T13:23:03.798Z
+119,driver-ner-119,driver119@safelogix.ner.gov.in,driver,Tenzing Angami [Meghalaya],+91 9435333673,TR-59-2024009507,off_duty,25.24270,91.72000,2026-11-17T13:23:03.798Z
+120,driver-ner-120,driver120@safelogix.ner.gov.in,driver,Rajesh Kamei [Meghalaya],+91 9435868436,AS-11-2022008386,on_duty,25.44970,92.18270,2026-11-17T13:23:03.798Z

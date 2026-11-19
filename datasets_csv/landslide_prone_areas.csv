@@ -1,0 +1,31 @@
+id,name,state,highway_corridor,hazard_level,slope_angle,vulnerability_note,safe_alternate_route,latitude,longitude
+ls-as-kamakhya,Kamakhya Foothills / Nilachal Hill,Assam,Guwahati Urban Bypass,High,42°,Steep red soil cutting; heavy monsoon surface runoff,Maligaon-Pandu Riverfront Link,26.155,91.705
+ls-as-jorabat,Jorabat Mountain Border Pass,Assam,NH-6 / NH-27 Confluence,Critical,55°,Active rockfall and deep mudslides on Meghalaya boundary,Garchuk Staging Bypass,26.108,91.895
+ls-as-kharghuli,Kharghuli Riverfront Slope,Assam,Brahmaputra Hill Ridge,High,38°,Riverbank hill erosion overlooking Brahmaputra corridor,MG Road Central Arterial,26.195,91.775
+ls-as-khanapara,Khanapara Mountain Ridge,Assam,NH-27 Southern Bypass,High,45°,Unconsolidated shale runoff across outer road shoulder,Center Express Lanes,26.111,91.808
+ls-as-haflong-jatinga,Jatinga - Haflong Valley Slope,Assam,NH-27 Mahur-Harangajao Section,Critical,50°,Massive sinking zone in Dima Hasao hills; prone to track washouts,Lumding-Silchar Hill Detour,25.12,93.03
+ls-as-sonapur-east,Sonapur Jagiroad Cutting,Assam,NH-27 Freight Corridor,Medium,32°,Localized soil displacement after heavy downpours,Northern Trunk Highway,26.12,91.96
+ls-ml-nongpoh,Nongpoh Valley Cutting,Meghalaya,NH-6 Guwahati-Shillong Lifeline,Critical,48°,Continuous slope seepage on G-S Expressway,Umiam Lake Bypass,25.9015,91.8795
+ls-ml-umiam,Umiam Dam Mountain Slopes,Meghalaya,NH-6 Mawiong Link,High,44°,Submerged slope toe causing slip along reservoir edge,Mawdiangdiang New Shillong Route,25.65,91.91
+ls-ml-sohra,Cherrapunji (Sohra) Gorge Escarpment,Meghalaya,Sohra-Shella Road,Critical,60°,Highest global precipitation impact; limestone karst collapse,Hold at Sohra Staging Depot,25.2702,91.7323
+ls-ml-sonapur-tunnel,Sonapur Tunnel Jaintia Hills,Meghalaya,NH-6 Jowai-Ratacherra Section,Critical,58°,Famous national bottleneck; mudslides engulf tunnel portal,No alternate for heavy freight,25.105,92.36
+ls-ml-dawki-tamabil,Dawki Gorge River Cutting,Meghalaya,NH-206 Pynursla-Dawki Lifeline,High,52°,Steep gorge descent with frequent loose boulder roll-offs,Reroute via Jowai-Amlarem,25.21,91.98
+ls-ar-sela,Sela Pass North Ridge,Arunachal Pradesh,Balipara-Charduar-Tawang (BCT) Road,Critical,62°,"Snow avalanche and freeze-thaw rockfall at 13,700 ft",Sela Twin Tunnel link,27.5036,92.1039
+ls-ar-bhalukpong,Bhalukpong Mountain Gate,Arunachal Pradesh,NH-13 Entry Artery,High,46°,Kameng river undercut slope; mud slides onto pavement,Orang-Kalaktang-Shergaon (OKSR),27.01,92.65
+ls-ar-bomdila-pass,Bomdila Viewpoint Escarpment,Arunachal Pradesh,NH-13 West Kameng Artery,High,50°,Fog-induced visibility loss and weathered granite slippage,Dirang Hill Link,27.2644,92.4158
+ls-ar-pasighat-yingkiong,Siang River Gorge Road,Arunachal Pradesh,Pasighat-Yingkiong Highway,Critical,56°,Massive landslide blocking upper Siang supply lifeline,Wait at Pasighat Base Depot,28.25,95.1
+ls-sk-29mile,29th Mile NH-10 Sinking Zone,Sikkim,NH-10 Siliguri-Gangtok Lifeline,Critical,54°,Premier active sinking zone in Eastern Himalayas; washouts,Lava-Algarah-Reshi Detour,27.11,88.47
+ls-sk-teesta-bazaar,Teesta Bazaar Lowland Chokepoint,Sikkim,NH-10 Junction,Critical,40°,River silt deposition and flash flood inundation,Gorubathan Route,27.06,88.43
+ls-sk-mangan-chunthang,Chungthang - Lachen Road,Sikkim,North Sikkim Defense Highway,Critical,65°,Glacial outburst flood debris & slope destruction,Emergency Bailey Bridge Convoy,27.6,88.65
+ls-sk-namchi-tarey,Tarey Bhir Ridge,Sikkim,Namchi-Jorethang Link,Medium,36°,Topsoil saturation and terrace collapse,Melli-Nayabazar Highway,27.1667,88.35
+ls-nl-paglapahar,Pagla Pahar (Mad Mountain) Pass,Nagaland,NH-29 Dimapur-Kohima Lifeline,Critical,58°,Historical boulder fall and mud inundation cutting Kohima supply,Niuland-Kohima Alternative Road,25.79,93.89
+ls-nl-kohima-bypass,Kohima South Sinking Zone,Nagaland,NH-2 Imphal Connection,High,45°,Urban hill creeping causing road pavement cleavage,Pfutsero-Chakhabama Link,25.64,94.12
+ls-nl-mokokchung-tuensang,Longnak Hill Pass,Nagaland,Mokokchung-Tuensang Highway,High,44°,Shale fracture sliding during monsoon peak,Wokha-Mokokchung Connector,26.25,94.65
+ls-mn-khongsang,Khongsang - Noney Highway Slope,Manipur,NH-37 Imphal-Jiribam Lifeline,Critical,52°,Major landslide zone along Tupul railway/road corridor,NH-2 via Dimapur (High Tension),24.85,93.55
+ls-mn-maram-senapati,Maram Mountain Pass,Manipur,NH-2 Northern Lifeline,High,48°,Mud debris accumulation across twin lanes,Hold at Mao Gate Checkpost,25.4,94.08
+ls-mn-ukhrul-jessami,Shirui Hills Approach,Manipur,Ukhrul-Nagaland Border Artery,Medium,39°,High altitude clay soil slippage,Imphal East Bypass,25.1167,94.3667
+ls-mz-durtlang,Durtlang Sinking Hills,Mizoram,Aizawl North Entry Highway (NH-306),Critical,55°,Geologically fragile siltstone slope overlooking northern Aizawl,Sairang-Lengpui Airport Highway,23.78,92.73
+ls-mz-vairengte-bilkhawthlir,Vairengte Hill Ascents,Mizoram,NH-306 Assam Border Gateway,High,47°,Essential truck fuel supply bottleneck during rains,Bhairabi Railway Link,24.35,92.7
+ls-mz-lunglei-hnahthial,Hnahthial Ridge Road,Mizoram,South Mizoram Lifeline,High,44°,Hill face sliding following localized continuous rainfall,Khawzawl Highway,23.05,92.85
+ls-tr-atharamura,Atharamura Mountain Range Pass,Tripura,NH-8 Teliamura-Ambassa Artery,High,42°,Tripura central spine connecting Agartala to rest of India,Hold at Teliamura Staging Hub,23.88,91.68
+ls-tr-baramura,Baramura Hill Eco-Corridor,Tripura,NH-8 Western Approach,Medium,35°,Loose soil cutting slippage onto roadway edge,Champaknagar local bypass,23.85,91.55

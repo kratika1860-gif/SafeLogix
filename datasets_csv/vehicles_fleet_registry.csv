@@ -1,0 +1,151 @@
+id,make,model,year,license_plate,status,created_at
+1,Force,Gurkha 4x4 Quick Response,2022,ML-14-A-2770,maintenance,2026-11-17T13:23:03.843Z
+2,Tata,407 All-Terrain 4x4,2025,AR-05-H-6532,available,2026-11-17T13:23:03.843Z
+3,Tata,Yodha 4x4 Heavy Hauler,2024,SK-08-E-5225,maintenance,2026-11-17T13:23:03.843Z
+4,BharatBenz,1217C High-Payload Transit,2021,NL-10-E-4610,available,2026-11-17T13:23:03.843Z
+5,Tata,407 All-Terrain 4x4,2023,MN-10-A-1673,available,2026-11-17T13:23:03.843Z
+6,Force,Gurkha 4x4 Quick Response,2021,MZ-01-A-2502,maintenance,2026-11-17T13:23:03.843Z
+7,Tata,407 All-Terrain 4x4,2025,TR-03-A-9145,assigned,2026-11-17T13:23:03.843Z
+8,Tata,Yodha 4x4 Heavy Hauler,2023,AS-03-C-3402,assigned,2026-11-17T13:23:03.843Z
+9,Tata,407 All-Terrain 4x4,2025,ML-11-TR-8700,assigned,2026-11-17T13:23:03.843Z
+10,Toyota,Hilux 4x4 Heavy Rescue,2023,AR-15-C-8273,maintenance,2026-11-17T13:23:03.843Z
+11,Toyota,Hilux 4x4 Heavy Rescue,2022,SK-01-E-5883,available,2026-11-17T13:23:03.843Z
+12,Mahindra,Bolero Camper 4WD,2025,NL-08-E-7599,assigned,2026-11-17T13:23:03.843Z
+13,Isuzu,D-Max V-Cross Emergency,2024,MN-04-TR-8556,assigned,2026-11-17T13:23:03.843Z
+14,Isuzu,D-Max V-Cross Emergency,2022,MZ-08-C-5563,available,2026-11-17T13:23:03.843Z
+15,BharatBenz,1217C High-Payload Transit,2021,TR-01-A-5330,assigned,2026-11-17T13:23:03.843Z
+16,BharatBenz,1217C High-Payload Transit,2022,AS-13-C-7195,available,2026-11-17T13:23:03.843Z
+17,BharatBenz,1217C High-Payload Transit,2022,ML-06-H-6083,available,2026-11-17T13:23:03.843Z
+18,Toyota,Hilux 4x4 Heavy Rescue,2025,AR-13-A-4560,available,2026-11-17T13:23:03.843Z
+19,Ashok Leyland,Ecomet 1215 Mountain Tanker,2023,SK-08-C-5825,assigned,2026-11-17T13:23:03.843Z
+20,BharatBenz,1217C High-Payload Transit,2023,NL-10-E-6646,assigned,2026-11-17T13:23:03.843Z
+21,Isuzu,D-Max V-Cross Emergency,2025,MN-08-A-4092,assigned,2026-11-17T13:23:03.843Z
+22,Tata,Yodha 4x4 Heavy Hauler,2022,MZ-09-C-8620,assigned,2026-11-17T13:23:03.843Z
+23,Mahindra,Bolero Camper 4WD,2025,TR-02-TR-5048,assigned,2026-11-17T13:23:03.843Z
+24,Tata,407 All-Terrain 4x4,2024,AS-09-E-5798,available,2026-11-17T13:23:03.843Z
+25,Force,Gurkha 4x4 Quick Response,2024,ML-03-A-2879,available,2026-11-17T13:23:03.843Z
+26,Ashok Leyland,Ecomet 1215 Mountain Tanker,2024,AR-06-H-5465,available,2026-11-17T13:23:03.843Z
+27,Force,Gurkha 4x4 Quick Response,2021,SK-08-TR-2645,assigned,2026-11-17T13:23:03.843Z
+28,BharatBenz,1217C High-Payload Transit,2024,NL-13-TR-3341,assigned,2026-11-17T13:23:03.843Z
+29,Mahindra,Bolero Camper 4WD,2021,MN-06-H-7485,assigned,2026-11-17T13:23:03.843Z
+30,Mahindra,Bolero Camper 4WD,2025,MZ-07-TR-9089,maintenance,2026-11-17T13:23:03.843Z
+31,Tata,Yodha 4x4 Heavy Hauler,2025,TR-13-H-2178,assigned,2026-11-17T13:23:03.843Z
+32,Force,Gurkha 4x4 Quick Response,2023,AS-08-TR-2852,assigned,2026-11-17T13:23:03.843Z
+33,Force,Gurkha 4x4 Quick Response,2022,ML-11-B-1431,assigned,2026-11-17T13:23:03.843Z
+34,Toyota,Hilux 4x4 Heavy Rescue,2023,AR-01-H-6961,assigned,2026-11-17T13:23:03.843Z
+35,Force,Gurkha 4x4 Quick Response,2021,SK-13-E-1267,assigned,2026-11-17T13:23:03.843Z
+36,Isuzu,D-Max V-Cross Emergency,2024,NL-07-H-7880,available,2026-11-17T13:23:03.843Z
+37,BharatBenz,1217C High-Payload Transit,2021,MN-13-A-2887,maintenance,2026-11-17T13:23:03.843Z
+38,Ashok Leyland,Ecomet 1215 Mountain Tanker,2022,MZ-10-TR-1270,assigned,2026-11-17T13:23:03.843Z
+39,Ashok Leyland,Ecomet 1215 Mountain Tanker,2021,TR-03-C-9619,available,2026-11-17T13:23:03.843Z
+40,Tata,Yodha 4x4 Heavy Hauler,2024,AS-06-B-2628,available,2026-11-17T13:23:03.843Z
+41,Force,Gurkha 4x4 Quick Response,2023,ML-01-E-3027,maintenance,2026-11-17T13:23:03.843Z
+42,Isuzu,D-Max V-Cross Emergency,2022,AR-10-A-8998,assigned,2026-11-17T13:23:03.843Z
+43,Tata,Yodha 4x4 Heavy Hauler,2025,SK-01-B-3780,assigned,2026-11-17T13:23:03.843Z
+44,Toyota,Hilux 4x4 Heavy Rescue,2022,NL-12-TR-8042,available,2026-11-17T13:23:03.843Z
+45,BharatBenz,1217C High-Payload Transit,2022,MN-07-C-3267,maintenance,2026-11-17T13:23:03.843Z
+46,BharatBenz,1217C High-Payload Transit,2022,MZ-09-C-4771,assigned,2026-11-17T13:23:03.843Z
+47,Tata,Yodha 4x4 Heavy Hauler,2023,TR-03-E-7179,assigned,2026-11-17T13:23:03.843Z
+48,Ashok Leyland,Ecomet 1215 Mountain Tanker,2022,AS-07-E-2537,assigned,2026-11-17T13:23:03.843Z
+49,BharatBenz,1217C High-Payload Transit,2021,ML-02-E-3484,assigned,2026-11-17T13:23:03.843Z
+50,Tata,Yodha 4x4 Heavy Hauler,2024,AR-02-TR-4588,maintenance,2026-11-17T13:23:03.843Z
+51,BharatBenz,1217C High-Payload Transit,2024,SK-06-B-2667,available,2026-11-17T13:23:03.843Z
+52,Mahindra,Bolero Camper 4WD,2021,NL-09-E-5235,available,2026-11-17T13:23:03.843Z
+53,Ashok Leyland,Ecomet 1215 Mountain Tanker,2022,MN-07-H-9799,maintenance,2026-11-17T13:23:03.843Z
+54,BharatBenz,1217C High-Payload Transit,2022,MZ-04-C-8342,maintenance,2026-11-17T13:23:03.843Z
+55,Isuzu,D-Max V-Cross Emergency,2021,TR-04-C-2276,maintenance,2026-11-17T13:23:03.843Z
+56,Force,Gurkha 4x4 Quick Response,2023,AS-06-C-9046,available,2026-11-17T13:23:03.843Z
+57,Ashok Leyland,Ecomet 1215 Mountain Tanker,2025,ML-05-E-6578,maintenance,2026-11-17T13:23:03.843Z
+58,Force,Gurkha 4x4 Quick Response,2021,AR-13-E-6747,maintenance,2026-11-17T13:23:03.843Z
+59,BharatBenz,1217C High-Payload Transit,2025,SK-09-B-3257,available,2026-11-17T13:23:03.843Z
+60,Ashok Leyland,Ecomet 1215 Mountain Tanker,2024,NL-02-H-9165,maintenance,2026-11-17T13:23:03.843Z
+61,Tata,407 All-Terrain 4x4,2021,MN-05-E-1727,assigned,2026-11-17T13:23:03.843Z
+62,Isuzu,D-Max V-Cross Emergency,2025,MZ-11-E-1716,maintenance,2026-11-17T13:23:03.843Z
+63,Tata,Yodha 4x4 Heavy Hauler,2024,TR-07-E-2774,available,2026-11-17T13:23:03.843Z
+64,Isuzu,D-Max V-Cross Emergency,2022,AS-09-E-5845,assigned,2026-11-17T13:23:03.843Z
+65,BharatBenz,1217C High-Payload Transit,2022,ML-10-A-7797,available,2026-11-17T13:23:03.843Z
+66,Isuzu,D-Max V-Cross Emergency,2025,AR-04-TR-7899,assigned,2026-11-17T13:23:03.843Z
+67,Ashok Leyland,Ecomet 1215 Mountain Tanker,2024,SK-04-H-2612,available,2026-11-17T13:23:03.843Z
+68,Tata,Yodha 4x4 Heavy Hauler,2021,NL-09-C-8111,assigned,2026-11-17T13:23:03.843Z
+69,Tata,Yodha 4x4 Heavy Hauler,2021,MN-15-H-7268,assigned,2026-11-17T13:23:03.843Z
+70,Ashok Leyland,Ecomet 1215 Mountain Tanker,2022,MZ-10-A-5988,maintenance,2026-11-17T13:23:03.843Z
+71,BharatBenz,1217C High-Payload Transit,2025,TR-14-TR-8752,available,2026-11-17T13:23:03.843Z
+72,Ashok Leyland,Ecomet 1215 Mountain Tanker,2021,AS-13-H-9127,maintenance,2026-11-17T13:23:03.843Z
+73,Tata,407 All-Terrain 4x4,2024,ML-09-TR-4896,assigned,2026-11-17T13:23:03.843Z
+74,Tata,Yodha 4x4 Heavy Hauler,2024,AR-11-TR-1129,available,2026-11-17T13:23:03.843Z
+75,Force,Gurkha 4x4 Quick Response,2022,SK-08-C-2521,assigned,2026-11-17T13:23:03.843Z
+76,Tata,Yodha 4x4 Heavy Hauler,2025,NL-15-H-6525,maintenance,2026-11-17T13:23:03.843Z
+77,Toyota,Hilux 4x4 Heavy Rescue,2022,MN-14-TR-4000,maintenance,2026-11-17T13:23:03.843Z
+78,Tata,407 All-Terrain 4x4,2023,MZ-02-TR-3816,maintenance,2026-11-17T13:23:03.843Z
+79,Ashok Leyland,Ecomet 1215 Mountain Tanker,2022,TR-03-A-2821,assigned,2026-11-17T13:23:03.843Z
+80,Tata,407 All-Terrain 4x4,2022,AS-10-TR-6919,assigned,2026-11-17T13:23:03.843Z
+81,Mahindra,Bolero Camper 4WD,2021,ML-07-B-7116,maintenance,2026-11-17T13:23:03.843Z
+82,Toyota,Hilux 4x4 Heavy Rescue,2021,AR-13-TR-7973,available,2026-11-17T13:23:03.843Z
+83,Ashok Leyland,Ecomet 1215 Mountain Tanker,2022,SK-03-E-5012,assigned,2026-11-17T13:23:03.843Z
+84,Tata,407 All-Terrain 4x4,2024,NL-05-H-1622,available,2026-11-17T13:23:03.843Z
+85,Mahindra,Bolero Camper 4WD,2024,MN-11-H-4565,available,2026-11-17T13:23:03.843Z
+86,BharatBenz,1217C High-Payload Transit,2025,MZ-11-TR-1555,available,2026-11-17T13:23:03.843Z
+87,Tata,Yodha 4x4 Heavy Hauler,2022,TR-15-A-1410,assigned,2026-11-17T13:23:03.843Z
+88,BharatBenz,1217C High-Payload Transit,2024,AS-11-A-1940,available,2026-11-17T13:23:03.843Z
+89,Ashok Leyland,Ecomet 1215 Mountain Tanker,2024,ML-09-B-6147,available,2026-11-17T13:23:03.843Z
+90,Tata,Yodha 4x4 Heavy Hauler,2023,AR-08-E-8851,available,2026-11-17T13:23:03.843Z
+91,BharatBenz,1217C High-Payload Transit,2025,SK-15-E-9580,available,2026-11-17T13:23:03.843Z
+92,Isuzu,D-Max V-Cross Emergency,2024,NL-04-B-5044,maintenance,2026-11-17T13:23:03.843Z
+93,Isuzu,D-Max V-Cross Emergency,2023,MN-02-H-2512,assigned,2026-11-17T13:23:03.843Z
+94,Ashok Leyland,Ecomet 1215 Mountain Tanker,2021,MZ-04-A-5133,assigned,2026-11-17T13:23:03.843Z
+95,Mahindra,Bolero Camper 4WD,2022,TR-04-E-6325,maintenance,2026-11-17T13:23:03.843Z
+96,Ashok Leyland,Ecomet 1215 Mountain Tanker,2025,AS-12-E-4792,assigned,2026-11-17T13:23:03.843Z
+97,Tata,407 All-Terrain 4x4,2023,ML-14-H-2072,assigned,2026-11-17T13:23:03.843Z
+98,Force,Gurkha 4x4 Quick Response,2024,AR-05-H-7942,maintenance,2026-11-17T13:23:03.843Z
+99,Force,Gurkha 4x4 Quick Response,2024,SK-10-TR-4201,available,2026-11-17T13:23:03.843Z
+100,Toyota,Hilux 4x4 Heavy Rescue,2024,NL-05-H-1607,available,2026-11-17T13:23:03.843Z
+101,Toyota,Hilux 4x4 Heavy Rescue,2021,MN-09-TR-2627,maintenance,2026-11-17T13:23:03.843Z
+102,Ashok Leyland,Ecomet 1215 Mountain Tanker,2025,MZ-05-B-6211,assigned,2026-11-17T13:23:03.843Z
+103,Tata,407 All-Terrain 4x4,2023,TR-09-TR-7569,assigned,2026-11-17T13:23:03.843Z
+104,Tata,407 All-Terrain 4x4,2024,AS-15-TR-7983,maintenance,2026-11-17T13:23:03.843Z
+105,Isuzu,D-Max V-Cross Emergency,2025,ML-05-TR-2732,available,2026-11-17T13:23:03.843Z
+106,Tata,407 All-Terrain 4x4,2025,AR-01-H-6056,maintenance,2026-11-17T13:23:03.843Z
+107,Tata,Yodha 4x4 Heavy Hauler,2023,SK-15-TR-7774,assigned,2026-11-17T13:23:03.843Z
+108,Ashok Leyland,Ecomet 1215 Mountain Tanker,2024,NL-06-H-3476,assigned,2026-11-17T13:23:03.843Z
+109,Force,Gurkha 4x4 Quick Response,2023,MN-13-H-5929,available,2026-11-17T13:23:03.843Z
+110,BharatBenz,1217C High-Payload Transit,2024,MZ-07-E-4721,available,2026-11-17T13:23:03.843Z
+111,Tata,Yodha 4x4 Heavy Hauler,2025,TR-06-C-8210,maintenance,2026-11-17T13:23:03.843Z
+112,Ashok Leyland,Ecomet 1215 Mountain Tanker,2021,AS-04-TR-2327,assigned,2026-11-17T13:23:03.843Z
+113,Toyota,Hilux 4x4 Heavy Rescue,2023,ML-11-C-9423,assigned,2026-11-17T13:23:03.843Z
+114,BharatBenz,1217C High-Payload Transit,2025,AR-05-E-9230,maintenance,2026-11-17T13:23:03.843Z
+115,Ashok Leyland,Ecomet 1215 Mountain Tanker,2022,SK-11-TR-3476,assigned,2026-11-17T13:23:03.843Z
+116,Isuzu,D-Max V-Cross Emergency,2024,NL-04-C-8293,assigned,2026-11-17T13:23:03.843Z
+117,Ashok Leyland,Ecomet 1215 Mountain Tanker,2021,MN-14-H-3870,available,2026-11-17T13:23:03.843Z
+118,Mahindra,Bolero Camper 4WD,2025,MZ-13-TR-4071,assigned,2026-11-17T13:23:03.843Z
+119,Tata,Yodha 4x4 Heavy Hauler,2022,TR-01-A-5502,assigned,2026-11-17T13:23:03.843Z
+120,Mahindra,Bolero Camper 4WD,2025,AS-03-B-3104,maintenance,2026-11-17T13:23:03.843Z
+121,Tata,407 All-Terrain 4x4,2022,ML-13-C-1102,maintenance,2026-11-17T13:23:03.843Z
+122,Tata,407 All-Terrain 4x4,2023,AR-02-A-1922,maintenance,2026-11-17T13:23:03.843Z
+123,Force,Gurkha 4x4 Quick Response,2023,SK-06-A-1290,assigned,2026-11-17T13:23:03.843Z
+124,BharatBenz,1217C High-Payload Transit,2024,NL-12-H-1918,available,2026-11-17T13:23:03.843Z
+125,Force,Gurkha 4x4 Quick Response,2024,MN-15-H-4144,assigned,2026-11-17T13:23:03.843Z
+126,Tata,407 All-Terrain 4x4,2024,MZ-11-B-5751,assigned,2026-11-17T13:23:03.843Z
+127,Ashok Leyland,Ecomet 1215 Mountain Tanker,2023,TR-06-B-5516,available,2026-11-17T13:23:03.843Z
+128,BharatBenz,1217C High-Payload Transit,2022,AS-02-C-8442,available,2026-11-17T13:23:03.843Z
+129,Force,Gurkha 4x4 Quick Response,2025,ML-11-C-7294,available,2026-11-17T13:23:03.843Z
+130,Tata,407 All-Terrain 4x4,2021,AR-15-E-6088,assigned,2026-11-17T13:23:03.843Z
+131,Isuzu,D-Max V-Cross Emergency,2024,SK-01-B-3476,assigned,2026-11-17T13:23:03.843Z
+132,Tata,407 All-Terrain 4x4,2022,NL-04-H-8883,maintenance,2026-11-17T13:23:03.843Z
+133,Mahindra,Bolero Camper 4WD,2021,MN-04-B-8313,available,2026-11-17T13:23:03.843Z
+134,BharatBenz,1217C High-Payload Transit,2025,MZ-09-A-2913,available,2026-11-17T13:23:03.843Z
+135,Isuzu,D-Max V-Cross Emergency,2024,TR-14-A-2213,available,2026-11-17T13:23:03.843Z
+136,Tata,407 All-Terrain 4x4,2024,AS-01-A-4719,assigned,2026-11-17T13:23:03.843Z
+137,Tata,407 All-Terrain 4x4,2021,ML-05-A-5389,maintenance,2026-11-17T13:23:03.843Z
+138,Ashok Leyland,Ecomet 1215 Mountain Tanker,2025,AR-10-H-8385,assigned,2026-11-17T13:23:03.843Z
+139,Toyota,Hilux 4x4 Heavy Rescue,2025,SK-12-E-7703,maintenance,2026-11-17T13:23:03.843Z
+140,Tata,407 All-Terrain 4x4,2023,NL-01-H-6720,maintenance,2026-11-17T13:23:03.843Z
+141,Mahindra,Bolero Camper 4WD,2025,MN-13-A-3032,available,2026-11-17T13:23:03.843Z
+142,Toyota,Hilux 4x4 Heavy Rescue,2022,MZ-05-TR-5231,maintenance,2026-11-17T13:23:03.843Z
+143,Mahindra,Bolero Camper 4WD,2022,TR-09-H-1367,assigned,2026-11-17T13:23:03.843Z
+144,Toyota,Hilux 4x4 Heavy Rescue,2024,AS-03-H-3270,assigned,2026-11-17T13:23:03.843Z
+145,Mahindra,Bolero Camper 4WD,2025,ML-15-C-9838,available,2026-11-17T13:23:03.843Z
+146,Ashok Leyland,Ecomet 1215 Mountain Tanker,2021,AR-11-E-5632,maintenance,2026-11-17T13:23:03.843Z
+147,Force,Gurkha 4x4 Quick Response,2021,SK-15-E-5614,assigned,2026-11-17T13:23:03.843Z
+148,Tata,Yodha 4x4 Heavy Hauler,2022,NL-09-TR-8643,maintenance,2026-11-17T13:23:03.843Z
+149,Force,Gurkha 4x4 Quick Response,2021,MN-06-E-8976,assigned,2026-11-17T13:23:03.843Z
+150,BharatBenz,1217C High-Payload Transit,2021,MZ-04-C-5852,maintenance,2026-11-17T13:23:03.843Z

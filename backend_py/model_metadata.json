@@ -1,0 +1,79 @@
+{
+  "baseline_logistic_regression": {
+    "precision": 0.3843,
+    "recall": 0.5379,
+    "f1_score": 0.4483,
+    "accuracy": 0.8087,
+    "confusion_matrix": [
+      [
+        5607,
+        955
+      ],
+      [
+        512,
+        596
+      ]
+    ]
+  },
+  "main_random_forest": {
+    "precision": 0.78,
+    "recall": 0.4639,
+    "f1_score": 0.5818,
+    "accuracy": 0.9037,
+    "confusion_matrix": [
+      [
+        6417,
+        145
+      ],
+      [
+        594,
+        514
+      ]
+    ],
+    "feature_importance": {
+      "rain_7d": 0.3175,
+      "rain_3d": 0.2756,
+      "rain_1d": 0.2678,
+      "near_hazard_km": 0.0387,
+      "elevation": 0.0342,
+      "slope": 0.0285,
+      "length_m": 0.0231,
+      "report_count": 0.0145
+    }
+  },
+  "main_xgboost": {
+    "precision": 0.692,
+    "recall": 0.4765,
+    "f1_score": 0.5644,
+    "accuracy": 0.8937,
+    "confusion_matrix": [
+      [
+        6327,
+        235
+      ],
+      [
+        580,
+        528
+      ]
+    ],
+    "feature_importance": {
+      "rain_1d": 0.3724,
+      "rain_3d": 0.1835,
+      "rain_7d": 0.1662,
+      "near_hazard_km": 0.0716,
+      "elevation": 0.0582,
+      "slope": 0.0508,
+      "length_m": 0.0489,
+      "report_count": 0.0485
+    }
+  },
+  "temporal_split": {
+    "train_period": "2018-2021",
+    "test_period": "2022-2023",
+    "train_size": 15340,
+    "test_size": 7670,
+    "train_positive_rate": 0.1454,
+    "test_positive_rate": 0.1445
+  },
+  "labeling_methodology": "NASA GLC spatial matching within 1.5km + empirical geotechnical failure threshold with 8% noise injection"
+}

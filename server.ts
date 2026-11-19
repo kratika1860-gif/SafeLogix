@@ -58,6 +58,7 @@ async function startServer() {
   });
 
   app.use('/api/', apiLimiter);
+  app.use('/datasets', express.static(path.join(process.cwd(), 'datasets_csv')));
 
   // Middleware to verify Firebase token
   const authenticate = async (req: any, res: any, next: any) => {

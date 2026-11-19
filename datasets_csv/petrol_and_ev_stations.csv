@@ -1,0 +1,9 @@
+id,name,brand,fuel_types,ev_charging,status,operating_hours,phone,longitude,latitude
+fuel-iocl-garchuk,Indian Oil (IOCL) Auto Care & EV Fast Hub (Garchuk),IndianOil,"High-Speed Diesel,Petrol (XP95),CNG,60kW DC EV Fast Charging",No,operational,24x7,+91 361 2234000,91.708,26.128
+fuel-bpcl-khanapara,Bharat Petroleum (BPCL) Highway Fuel Oasis (Khanapara),Bharat Petroleum,"Diesel,Speed Diesel,Petrol (Speed 97),DEF AdBlue",No,operational,24x7,+91 361 2234000,91.798,26.115
+fuel-hpcl-jalukbari,Hindustan Petroleum (HPCL) Heavy Fleet Station (Jalukbari),HPCL,"Diesel (HP Turbojet),Petrol (Power),Nitrogen Inflation",No,operational,24x7,+91 361 2234000,91.67,26.148
+fuel-nayara-jorabat,Nayara Energy Freight Fuel Depot (Jorabat),Nayara Energy,"Highway Commercial Diesel,Petrol,DEF Bulk Dispensing",No,operational,24x7,+91 361 2234000,91.885,26.11
+fuel-shell-sixmile,Shell Auto Care & EV Fast Charger (Six Mile),Shell,"Shell V-Power Diesel,Shell V-Power Petrol,EV 50kW Fast Charging",No,operational,24x7,+91 361 2234000,91.812,26.132
+fuel-iocl-paltanbazaar,Indian Oil (IOCL) City Center Fuel Station (Paltan Bazaar),IndianOil,"Diesel,Petrol,Auto LPG",No,operational,24x7,+91 361 2234000,91.752,26.178
+fuel-hpcl-bharalumukh,HPCL Riverfront Fuel Station (Bharalumukh),HPCL,"Diesel,Petrol,Air & Water Check",No,operational,24x7,+91 361 2234000,91.722,26.166
+fuel-reliance-borjhar,Jio-bp / Reliance Fuel & EV Fast Plaza (Borjhar Airport Rd),Jio-bp,"Active Technology Diesel,Active Petrol,EV 120kW Dual Gun Fast Charger",No,operational,24x7,+91 361 2234000,91.618,26.135

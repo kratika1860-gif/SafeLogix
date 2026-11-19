@@ -1,0 +1,33 @@
+station_id,nearest_village_id,nearest_village_name,village_district,distance_km
+ML_R_AMDUBIGHAT_AMJONG,ML_V_277773,Amphreng,Ri Bhoi,1.141
+ML_R_AMPATI,ML_V_273750,Muji Agalgre,South West Garo Hills,0.699
+ML_R_ARADONGA,ML_V_276346,Athiabari,West Khasi Hills,0.465
+ML_R_AWS_IN_HORTICULTURE_FARM_FRUIT_GARDEN,ML_V_278358,Nongthymmai CT,East Khasi Hills,1.506
+ML_R_AWS_IN_THE_OFFICE_OF_BDO_RERAPARA_BLOCK,ML_V_273688,Jaranggre,South West Garo Hills,0.723
+ML_R_AWS_IN_THE_OFFICE_OF_BDO_SAIPUNG_BLOCK,ML_V_279544,Daistong,East Jaintia Hills,1.671
+ML_R_AWS_IN_THE_OFFICE_OF_E_E_WR_NONGSTOIN,ML_V_249810,Nongstoin,West Khasi Hills,1.854
+ML_R_AWS_IN_THE_OFFICE_OF_E_E_WR_RESUBELPARA,ML_V_274609,Moina Saram,North Garo Hills,1.78
+ML_R_BAGHMARA,ML_V_276224,Rongkrekgittim,South Garo Hills,0.466
+ML_R_BAGHMARA,ML_V_276224,Rongkrekgittim,South Garo Hills,0.905
+ML_R_BAJENGDOBA,ML_V_274500,Upper Bajengdoba,North Garo Hills,0.535
+ML_R_CHIJANGGITTIM_RONGJENG,ML_V_274870,Bolsal Ading,East Garo Hills,0.548
+ML_R_GAROBADHA,ML_V_273648,Balapara,South West Garo Hills,1.106
+ML_R_HALDIBARI,ML_V_273027,Salbila Ii,West Garo Hills,0.698
+ML_R_JOWAI,ML_V_279185,Mihmyntdu,West Jaintia Hills,2.124
+ML_R_KUJIKURA,ML_V_274401,Rengginpara,West Garo Hills,0.13
+ML_R_LASHKARPARA,ML_V_273255,Boldampitbari,West Garo Hills,0.322
+ML_R_MAWKYRWAT,ML_V_277357,Mawkyllung,South West Khasi Hills,0.381
+ML_R_NARTIANG,ML_V_279139,Nartiang,West Jaintia Hills,1.003
+ML_R_NONGSPUNG,ML_V_276665,Hasem,West Khasi Hills,0.094
+ML_R_PYRTAKUNA_VILLAGE,ML_V_279489,Pyrtakuna,East Jaintia Hills,1.231
+ML_R_RESUBELPRA,ML_V_249807,Resubelpara,North Garo Hills,1.767
+ML_R_RIANGNA,ML_V_276810,Nongshyrkon B,West Khasi Hills,1.416
+ML_R_RIMRANGPARA,ML_V_275764,Mibonpara,South Garo Hills,0.233
+ML_R_SHANGPUNG,ML_V_279255,Shangpung Khlieh Mushut,West Jaintia Hills,0.582
+ML_R_TIKRIKILLA_TIKRIKILLA_BLOCK,ML_V_273254,Tikrikilla Catholic,West Garo Hills,0.489
+ML_R_TURA,ML_V_273606,Daldagre,West Garo Hills,0.177
+ML_R_UMNGI_DEMTHROIN,ML_V_278614,Mawryngkang,East Khasi Hills,1.031
+ML_R_WAGEASI,ML_V_274950,Imbanggi,North Garo Hills,1.38
+ML_R_WAHUMIEW_BRIDGE,ML_V_278351,Mylliem Mawkhar,East Khasi Hills,0.861
+ML_R_WARIMA_WILLIAMNAGAR,ML_V_275471,Sampalgre,East Garo Hills,0.713
+ML_R_WILLIAMNAGAR,ML_V_249808,Williamnagar,East Garo Hills,0.949

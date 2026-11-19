@@ -1,0 +1,18 @@
+{
+  "pilot_corridor": "NH-10, Rangpo to Gangtok, Sikkim, India",
+  "rangpo": {
+    "longitude": 88.5292,
+    "latitude": 27.172
+  },
+  "gangtok": {
+    "longitude": 88.6083,
+    "latitude": 27.3341
+  },
+  "corridor_buffer_m": 4000,
+  "sources": {
+    "roads": "OpenStreetMap via Overpass API",
+    "landslides": "NASA Global Landslide Catalog export",
+    "weather": "Open-Meteo Historical Weather API",
+    "elevation": "Open-Meteo Elevation API (Copernicus DEM GLO-90)"
+  }
+}

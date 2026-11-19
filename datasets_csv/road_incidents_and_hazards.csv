@@ -1,0 +1,5 @@
+incident_id,type,severity,description,longitude,latitude
+inc-1,accident,high,"Multi-vehicle collision blocking 2 lanes near Jalukbari Rotary, Guwahati.",91.662,26.151
+inc-2,flood,critical,Critical flash flooding and water overflow reported on GS Road / Zoo Road junction.,91.772,26.168
+inc-3,accident,high,Heavy truck breakdown and oil spill on NH-27 Guwahati Bypass near Khanapara.,91.788,26.112
+inc-4,road_closure,critical,Landslide clearing underway near Kamakhya foothills road.,91.705,26.155

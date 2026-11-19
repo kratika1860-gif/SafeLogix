@@ -1,0 +1,5 @@
+gap_id,entity_id,type,severity,title,delay_hours,longitude,latitude,explanation,recommended_action
+gap-jorabat,landslide-jorabat,Critical Chokepoint,critical,Jorabat Mountain Pass Freight Bottleneck,3.8,91.895,26.108,Landslide debris on NH-6/NH-27 pass. Outbound freight to Meghalaya & Tripura delayed by 3.8 hours.,Divert via Garchuk staging yard or wait at Jorabat depot.
+gap-gsroad,inc-flood-gsroad,Urban Inundation,high,GS Road & Zoo Road Waterlogging Corridor,1.5,91.772,26.168,Flash inundation on curb lanes; central elevated flyover lane active for light & emergency vehicles.,Reroute heavy trucks through VIP road or express bypass.
+gap-kamakhya,landslide-kamakhya,Slope Instability,high,Kamakhya Foothills Soil Slumping Corridor,2,91.705,26.155,Red soil slumping along hill contour under heavy rainfall precipitation threshold > 40mm/h.,Use Maligaon-Pandu riverfront bypass.
+gap-sonapur,gap-sonapur-potholes,Road Surface Degradation,medium,Sonapur-Jagiroad Freight Bypass Potholes,1.2,91.98,26.11,Monsoon road washaway causing localized speed reduction to 15-20 km/h.,Maintain extra braking distance; road maintenance team deployed.

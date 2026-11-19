@@ -1,0 +1,33 @@
+station_id,station_name,source_type,district,district_lgd_code,tehsil,river,basin,latitude,longitude,n_obs,first_obs,last_obs
+ML_R_AMDUBIGHAT_AMJONG,Amdubighat-Amjong,telemetry,Ri Bhoi,276,Ri-Bhoi,-,Brahmaputra,26.057939,92.264172,245,2026-01-20 17:00:00,2026-11-11 09:00:00
+ML_R_AMPATI,Ampati,telemetry,South West  Garo Hills,663,South West Garo Hills ,-,Brahmaputra,25.466108,89.945683,254,2026-02-01 00:00:00,2026-11-15 14:00:00
+ML_R_ARADONGA,Aradonga,telemetry,West Khasi Hills,279,West Khasi Hills ,-,Brahmaputra,25.834739,91.171299,208,2026-02-14 01:00:00,2026-11-12 10:00:00
+ML_R_AWS_IN_HORTICULTURE_FARM_FRUIT_GARDEN,AWS in Horticulture farm Fruit Garden,telemetry,East Khasi Hills,274,East Khasi Hills,-,Brahmaputra,25.563494,91.8974,1671,2026-01-09 16:00:00,2026-11-17 04:00:00
+ML_R_AWS_IN_THE_OFFICE_OF_BDO_RERAPARA_BLOCK,AWS in the office of BDO Rerapara Block,telemetry,South West  Garo Hills,663,South West Garo Hills ,-,Brahmaputra,25.519353,90.095256,2287,2026-01-14 07:00:00,2026-11-17 04:00:00
+ML_R_AWS_IN_THE_OFFICE_OF_BDO_SAIPUNG_BLOCK,AWS in the office of BDO Saipung Block,telemetry,East Jaintia Hills,657,East Jaintia Hills ,-,Brahmaputra,25.345019,92.618836,2488,2026-01-14 07:00:00,2026-11-17 04:00:00
+ML_R_AWS_IN_THE_OFFICE_OF_E_E_WR_NONGSTOIN,AWS in the office of E.E (WR) Nongstoin,telemetry,West Khasi Hills,279,West Khasi Hills ,-,Brahmaputra,25.526815,91.280224,2109,2026-01-14 07:00:00,2026-11-17 04:00:00
+ML_R_AWS_IN_THE_OFFICE_OF_E_E_WR_RESUBELPARA,AWS in the office of E.E (WR) Resubelpara,telemetry,North Garo Hills,656,North Garo Hills ,-,Brahmaputra,25.897981,90.642172,1735,2026-01-15 14:00:00,2026-11-17 04:00:00
+ML_R_BAGHMARA,BAGHMARA,manual,South Garo Hills,277,BAGHMARA,Simsang,Barak and Others,25.21305556,90.64138889,14,2021-01-14 19:00:00,2021-04-04 18:00:00
+ML_R_BAGHMARA,Baghmara ,telemetry,South Garo Hills,277,South Garo Hills,-,Brahmaputra,25.21,90.637222,17,2026-01-31 23:00:00,2026-10-17 23:00:00
+ML_R_BAJENGDOBA,Bajengdoba,telemetry,North Garo Hills,656,North Garo Hills ,-,Brahmaputra,25.8969,90.50808,1663,2026-01-01 00:00:00,2026-11-17 18:00:00
+ML_R_CHIJANGGITTIM_RONGJENG,Chijanggittim Rongjeng,telemetry,East Garo Hills,273,East Garo Hills ,-,Brahmaputra,25.65091,90.8088,379,2026-01-07 16:20:00,2026-10-28 19:00:00
+ML_R_GAROBADHA,Garobadha,telemetry,South West  Garo Hills,663,South West Garo Hills ,-,Brahmaputra,25.579128,90.015397,553,2026-01-14 11:00:00,2026-11-16 12:00:00
+ML_R_HALDIBARI,Haldibari,telemetry,West Garo Hills,278,West Garo Hills ,-,Brahmaputra,25.70735,90.00415,405,2026-02-13 16:00:00,2026-10-30 23:00:00
+ML_R_JOWAI,Jowai,telemetry,West Jaintia Hills,275,West Jaintia Hills,-,Brahmaputra,25.438933,92.219628,160,2026-03-20 11:00:00,2026-11-11 15:00:00
+ML_R_KUJIKURA,Kujikura,telemetry,West Garo Hills,278,West Garo Hills ,-,Brahmaputra,25.22794,90.21705,381,2026-02-09 10:00:00,2026-11-01 07:00:00
+ML_R_LASHKARPARA,Lashkarpara,telemetry,West Garo Hills,278,West Garo Hills ,-,Brahmaputra,25.95219,90.23698,466,2026-03-16 12:00:00,2026-11-16 22:00:00
+ML_R_MAWKYRWAT,Mawkyrwat,telemetry,South West Khasi Hills,658,South West Khasi Hills ,-,Brahmaputra,25.39572,91.43631,2367,2026-02-07 20:00:00,2026-11-11 13:00:00
+ML_R_NARTIANG,Nartiang,telemetry,West Jaintia Hills,275,West Jaintia Hills,-,Brahmaputra,25.565108,92.209356,101,2026-02-03 22:00:00,2026-11-11 22:00:00
+ML_R_NONGSPUNG,Nongspung,telemetry,West Khasi Hills,279,West Khasi Hills ,-,Brahmaputra,25.813167,91.31925,596,2026-02-10 16:00:00,2026-10-09 12:00:00
+ML_R_PYRTAKUNA_VILLAGE,Pyrtakuna village,telemetry,East Jaintia Hills,657,East Jaintia Hills ,-,Brahmaputra,25.07197,92.37913,542,2026-01-31 22:00:00,2026-11-03 19:00:00
+ML_R_RESUBELPRA,Resubelpra,telemetry,North Garo Hills,656,North Garo Hills ,-,Brahmaputra,25.89846,90.61771,309,2026-03-13 06:00:00,2026-11-17 00:00:00
+ML_R_RIANGNA,Riangna,telemetry,West Khasi Hills,279,West Khasi Hills ,-,Brahmaputra,25.431572,90.9896,749,2026-01-20 19:00:00,2026-11-11 07:00:00
+ML_R_RIMRANGPARA,Rimrangpara,telemetry,West Garo Hills,278,West Garo Hills ,-,Brahmaputra,25.31962,90.28767,624,2026-01-01 17:00:00,2026-11-15 21:00:00
+ML_R_SHANGPUNG,Shangpung,telemetry,West Jaintia Hills,275,West Jaintia Hills,-,Brahmaputra,25.469581,92.358547,617,2026-02-24 00:00:00,2026-11-11 14:00:00
+ML_R_TIKRIKILLA_TIKRIKILLA_BLOCK,Tikrikilla Tikrikilla Block,telemetry,West Garo Hills,278,West Garo Hills ,-,Brahmaputra,25.95143,90.21518,1028,2026-02-22 18:00:00,2026-11-13 20:00:00
+ML_R_TURA,TURA,manual,West Garo Hills,278,West Garo Hills ,Brahmaputra,Brahmaputra,25.52111111,90.18333333,1,2021-01-21 09:00:00,2021-01-21 09:00:00
+ML_R_UMNGI_DEMTHROIN,Umngi Demthroin,telemetry,East Khasi Hills,274,East Khasi Hills,-,Brahmaputra,25.39875,91.554778,208,2026-02-25 13:00:00,2026-11-11 06:00:00
+ML_R_WAGEASI,Wageasi,telemetry,North Garo Hills,656,North Garo Hills ,-,Brahmaputra,25.836519,90.782611,368,2026-01-01 10:00:00,2026-11-07 14:00:00
+ML_R_WAHUMIEW_BRIDGE,Wahumiew bridge,telemetry,East Khasi Hills,274,East Khasi Hills,-,Brahmaputra,25.466639,91.843111,855,2026-01-01 09:00:00,2026-11-11 13:00:00
+ML_R_WARIMA_WILLIAMNAGAR,Warima Williamnagar,telemetry,East Garo Hills,273,East Garo Hills ,-,Brahmaputra,25.49881,90.60206,681,2026-02-25 13:00:00,2026-11-17 02:00:00
+ML_R_WILLIAMNAGAR,WILLIAMNAGAR,manual,East Garo Hills,273,SAMANDA,Simsang,Barak and Others,25.50861111,90.60444444,23,2021-01-12 10:00:00,2021-06-02 17:45:00

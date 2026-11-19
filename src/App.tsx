@@ -16,6 +16,7 @@ import SystemHealth from './pages/admin/SystemHealth';
 import Trips from './pages/admin/Trips';
 import Users from './pages/admin/Users';
 import SOSAlerts from './pages/admin/SOSAlerts';
+import UserDashboard from './pages/UserDashboard';
 import Login from './pages/Login';
 import { useAppStore } from './store/useAppStore';
 
@@ -101,12 +102,13 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<UserDashboard />} />
+        <Route path="/dashboard" element={<UserDashboard />} />
         <Route path="/login" element={
           <ProtectedRoute bypassLogin={true}>
             <Login />
           </ProtectedRoute>
         } />
-        <Route path="/" element={<RootRedirect />} />
         
         <Route path="/driver" element={
           <ProtectedRoute allowedRoles={['driver', 'field_user']}>
