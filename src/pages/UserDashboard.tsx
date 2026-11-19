@@ -319,8 +319,8 @@ export default function UserDashboard() {
       rain_3d: activeWeather.rain3day,
       rain_7d: activeWeather.rain3day * 1.8
     }).then(res => {
-      if (!isCancelled && res) {
-        setMeghalayaRouteComparison(res);
+      if (!isCancelled) {
+        if (res) setMeghalayaRouteComparison(res);
         setIsComparingMeghalayaRoute(false);
       }
     }).catch(() => {

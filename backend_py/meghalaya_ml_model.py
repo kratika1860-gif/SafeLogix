@@ -275,13 +275,67 @@ class MeghalayaMLSystem:
         return self.metrics.get("probability_calibration", {})
 
     def predict_all_segments(self, rain_1d: float, rain_3d: float, rain_7d: float) -> List[Dict[str, Any]]:
-        """Evaluates ML landslide risk across all 284 Meghalaya road segments."""
+        """Evaluates ML landslide risk across all Meghalaya road segments in a fast vectorized batch."""
+        if not meghalaya_net.segments:
+            return []
+
+        rows = [{
+            "rain_1d": rain_1d,
+            "rain_3d": rain_3d,
+            "rain_7d": rain_7d,
+            "length_m": float(seg["length_m"]),
+            "elevation": float(seg["elevation"]),
+            "slope": float(seg["slope"]),
+            "near_hazard_km": float(seg.get("near_hazard_km", 2.5)),
+            "report_count": int(seg.get("report_count", 0))
+        } for seg in meghalaya_net.segments]
+
+        batch_df = pd.DataFrame(rows)[FEATURE_COLS]
+
+        if self.cal_rf_model is not None:
+            rf_probs = self.cal_rf_model.predict_proba(batch_df)[:, 1]
+        else:
+            rf_probs = self.rf_model.predict_proba(batch_df)[:, 1]
+
+        xgb_probs = self.xgb_model.predict_proba(batch_df)[:, 1]
+
         scored = []
-        for seg in meghalaya_net.segments:
-            res = self.predict_segment_risk(seg, rain_1d, rain_3d, rain_7d)
-            # Merge segment spatial data for map rendering
-            merged = {**seg, **res}
-            scored.append(merged)
+        for i, seg in enumerate(meghalaya_net.segments):
+            cal_rf_prob = float(rf_probs[i])
+            xgb_prob = float(xgb_probs[i])
+            ensemble_score = round(0.55 * cal_rf_prob + 0.45 * xgb_prob, 3)
+            prob_discrepancy = abs(cal_rf_prob - xgb_prob)
+            confidence = round(min(0.98, max(0.68, 1.0 - 0.70 * prob_discrepancy)), 2)
+
+            if ensemble_score >= 0.70:
+                category, color, badge_text = "VERY_HIGH", "#ef4444", "Very High Risk"
+            elif ensemble_score >= 0.50:
+                category, color, badge_text = "HIGH", "#f97316", "High Risk"
+            elif ensemble_score >= 0.20:
+                category, color, badge_text = "MODERATE", "#f59e0b", "Moderate Risk"
+            else:
+                category, color, badge_text = "LOW", "#10b981", "Low Risk"
+
+            res = {
+                "segment_id": seg["segment_id"],
+                "corridor": seg.get("corridor", "NH-6"),
+                "risk_score": ensemble_score,
+                "calibrated_risk": ensemble_score,
+                "risk_category": category,
+                "risk_tier": category,
+                "badge_text": badge_text,
+                "color_hex": color,
+                "confidence_score": confidence,
+                "rf_prob": round(cal_rf_prob, 3),
+                "xgb_prob": round(xgb_prob, 3),
+                "rain_1d": rain_1d,
+                "rain_3d": rain_3d,
+                "rain_7d": rain_7d,
+                "slope": float(seg["slope"]),
+                "elevation": float(seg["elevation"]),
+                "near_hazard_km": float(seg.get("near_hazard_km", 2.5))
+            }
+            scored.append({**seg, **res})
         return scored
 
 meghalaya_ml = MeghalayaMLSystem()

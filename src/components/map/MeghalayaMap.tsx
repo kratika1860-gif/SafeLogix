@@ -1,4 +1,4 @@
-import React, { useState, useRef, useMemo } from 'react';
+import React, { useState, useRef, useMemo, useEffect } from 'react';
 import Map, { NavigationControl, FullscreenControl, Source, Layer, Marker, MapRef } from 'react-map-gl/maplibre';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import { 
@@ -65,6 +65,43 @@ export default function MeghalayaMap({
     pitch: 28,
     bearing: 0
   };
+
+  // Automatically zoom & fit map bounds to reveal the full route and the destination
+  useEffect(() => {
+    if (!activeRouteComparison || !mapRef.current) return;
+    const coords: [number, number][] = [];
+    if (activeRouteComparison.shortest_route?.coordinates?.length) {
+      coords.push(...activeRouteComparison.shortest_route.coordinates);
+    }
+    if (activeRouteComparison.safer_route?.coordinates?.length) {
+      coords.push(...activeRouteComparison.safer_route.coordinates);
+    }
+    if (activeRouteComparison.origin) {
+      coords.push([activeRouteComparison.origin.lat, activeRouteComparison.origin.lon]);
+    }
+    if (activeRouteComparison.destination) {
+      coords.push([activeRouteComparison.destination.lat, activeRouteComparison.destination.lon]);
+    }
+    if (coords.length === 0) return;
+
+    let minLon = 180, maxLon = -180, minLat = 90, maxLat = -90;
+    for (const [lat, lon] of coords) {
+      if (lon < minLon) minLon = lon;
+      if (lon > maxLon) maxLon = lon;
+      if (lat < minLat) minLat = lat;
+      if (lat > maxLat) maxLat = lat;
+    }
+
+    // Safety padding for map bounds
+    try {
+      mapRef.current.fitBounds(
+        [[minLon, minLat], [maxLon, maxLat]],
+        { padding: { top: 90, bottom: 90, left: 80, right: 80 }, duration: 1200 }
+      );
+    } catch (e) {
+      console.warn("Could not fitBounds to route:", e);
+    }
+  }, [activeRouteComparison]);
 
   // 1. Shortest Route GeoJSON (Dashed Amber/Orange)
   const shortestRouteGeoJSON = useMemo(() => {
